@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #030637; /* Fondo oscuro */
+    color: #fff; /* Texto claro */
+}
+
+header {
+    background: #3C0753; /* Púrpura oscuro para la cabecera */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .logo img {
+    height: auto;
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Enlaces claros */
+    font-weight: bold;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.slide.active {
+    opacity: 1;
+    position: relative;
+}
+
+main {
+    padding: 20px;
+    background: #720453; /* Fondo de secciones en rojo-violeta oscuro */
+}
+
+.news-container, .event-container, .photo-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.news-container article, .event-container .event, .photo-gallery img {
+    flex-basis: 49%;
+    margin-bottom: 20px;
+    background: #910A67; /* Fondo para tarjetas en magenta oscuro */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    background: #3C0753; /* Púrpura oscuro para el pie de página */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* * {
+    /* margin: 0;
+    padding: 0;
+    box-sizing: border-box; */
+/* } */
+/* h2 {
+    color: #eef3ed;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 0.5em;
+    text-align: center;    
+} */

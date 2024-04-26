@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trap Argentino</title>
-    <link rel="icon" type="image/ico" href="./TrapArgento/static/icons/TrapArgento.png">
-    <link rel="stylesheet" href="./TrapArgento/static/css/style.css">
+    <link rel="icon" type="image/ico" href="./static/icons/TrapArgento.png">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="./TrapArgento/static/icons/TrapArgento.png" alt="Trap Argentino Logo" height="315">
+            <img src="./static/icons/TrapArgento.png" alt="Trap Argentino Logo" height="315">
         </div>
         <nav>
             <ul>
@@ -23,11 +23,16 @@
     </header>
     <main>
         <section id="hero">
-            <div class="hero-slider">
-                <!-- Slider de imágenes destacadas -->
-                <img src="imagen-destacada1.jpg" alt="Imagen Destacada 1">
-                <img src="imagen-destacada2.jpg" alt="Imagen Destacada 2">
-                <!-- Agrega más imágenes según necesites -->
+            <div class="slider">
+                <div class="slide active">
+                    <img src="./static/gallery/artistas/Duki Blanco.jpg" alt="Imagen Destacada 1">
+                </div>
+                <div class="slide">
+                    <img src="./static/gallery/artistas/Emilia Mernes Tapa.jpg" alt="Imagen Destacada 2">
+                </div>
+                <div class="slide">
+                    <img src="./static/gallery/artistas/Lit Killa violeta.jpg" alt="Imagen Destacada 3">
+                </div>
             </div>
         </section>
         <section id="sobre">
@@ -37,7 +42,6 @@
         <section id="ultimas-noticias">
             <h2>Últimas Noticias</h2>
             <div class="news-container">
-                <!-- Contenedor para noticias con efectos de desplazamiento o carrusel -->
                 <article>
                     <h3>Noticia 1</h3>
                     <p>Descripción breve de la noticia.</p>
@@ -46,13 +50,11 @@
                     <h3>Noticia 2</h3>
                     <p>Descripción breve de la noticia.</p>
                 </article>
-                <!-- Agrega más artículos según necesites -->
             </div>
         </section>
         <section id="eventos-destacados">
             <h2>Eventos Destacados</h2>
             <div class="event-container">
-                <!-- Contenedor para eventos con detalles al pasar el ratón -->
                 <div class="event">
                     <h3>Evento 1</h3>
                     <p>Detalles del evento.</p>
@@ -61,30 +63,25 @@
                     <h3>Evento 2</h3>
                     <p>Detalles del evento.</p>
                 </div>
-                <!-- Agrega más eventos según necesites -->
             </div>
         </section>
         <section id="galeria-fotos">
             <h2>Galería de Fotos</h2>
             <div class="photo-gallery">
-                <!-- Galería de fotos con opción de clic para ampliar -->
                 <img src="foto1.jpg" alt="Foto 1">
                 <img src="foto2.jpg" alt="Foto 2">
-                <!-- Agrega más fotos según necesites -->
             </div>
         </section>
     </main>
     <aside>
         <div class="social-media-links">
             <h2>Síguenos</h2>
-            <!-- Enlaces a redes sociales con íconos -->
             <a href="#">Instagram</a>
             <a href="#">Twitter</a>
             <a href="#">Facebook</a>
         </div>
         <div class="newsletter">
             <h2>Suscríbete</h2>
-            <!-- Formulario para suscripción a boletín informativo -->
             <form>
                 <input type="email" placeholder="Tu correo electrónico">
                 <button type="submit">Suscribir</button>
@@ -101,8 +98,16 @@
         </div>
         <div class="social-media-footer">
             <h3>Síguenos en redes sociales:</h3>
-            <!-- Íconos de redes sociales -->
         </div>
     </footer>
+    <script>
+        let slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 4000);
+    </script>
 </body>
 </html>
