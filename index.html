@@ -8,10 +8,28 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="./static/icons/TrapArgento.png" alt="Trap Argentino Logo" height="315">
+    <!-- Encabezado con slider de imágenes y navegación -->
+    <header class="slider">
+        <!-- Slider con múltiples imágenes de artistas -->
+        <div class="slide" id="slide1">
+            <img src="./static/gallery/artistas/Duki Blanco.jpg" alt="Imagen Destacada 1">
         </div>
+        <div class="slide" id="slide2">
+            <img src="./static/gallery/artistas/Emilia Mernes Tapa.jpg" alt="Imagen Destacada 2">
+        </div>
+        <div class="slide" id="slide3">
+            <img src="./static/gallery/artistas/Lit Killa violeta.jpg" alt="Imagen Destacada 3">
+        </div>
+        <div class="slide" id="slide4">
+            <img src="./static/gallery/artistas/Cazzu Casual.jpg" alt="Imagen Destacada 4">
+        </div>
+        <div class="slide" id="slide5">
+            <img src="./static/gallery/artistas/Nicki Nicole Vivo.jpg" alt="Imagen Destacada 5">
+        </div>
+        <div class="slide" id="slide6">
+            <img src="./static/gallery/artistas/Bizzarap y duki.jpg" alt="Imagen Destacada 6">
+        </div>
+        <!-- Navegación con enlaces a secciones de la página -->
         <nav>
             <ul>
                 <li><a href="#artistas">Artistas</a></li>
@@ -20,21 +38,40 @@
                 <li><a href="#noticias">Noticias</a></li>
             </ul>
         </nav>
+        <!-- Logo del sitio web -->
+        <div class="logo">
+            <img src="./static/icons/Trap Argento Oficial.webp" alt="Trap Argentino Logo">
+        </div>
+        <!-- Timeline con miniaturas de artistas -->
+        <div class="timeline">
+            <div class="timeline-item" data-target="slide1">
+                <div class="progress-bar"></div>
+                <div class="item-title">Duki Blanco</div>
+            </div>
+            <div class="timeline-item" data-target="slide2">
+                <div class="progress-bar"></div>
+                <div class="item-title">Emilia Mernes Tapa</div>
+            </div>
+            <div class="timeline-item" data-target="slide3">
+                <div class="progress-bar"></div>
+                <div class="item-title">Lit Killa violeta</div>
+            </div>
+            <div class="timeline-item" data-target="slide4">
+                <div class="progress-bar"></div>
+                <div class="item-title">Cazzu Casual</div>
+            </div>
+            <div class="timeline-item" data-target="slide5">
+                <div class="progress-bar"></div>
+                <div class="item-title">Nicki Nicole Vivo</div>
+            </div>
+            <div class="timeline-item" data-target="slide6">
+                <div class="progress-bar"></div>
+                <div class="item-title">Bizzarap y duki</div>
+            </div>
+        </div>
+        
     </header>
     <main>
-        <section id="hero">
-            <div class="slider">
-                <div class="slide active">
-                    <img src="./static/gallery/artistas/Duki Blanco.jpg" alt="Imagen Destacada 1">
-                </div>
-                <div class="slide">
-                    <img src="./static/gallery/artistas/Emilia Mernes Tapa.jpg" alt="Imagen Destacada 2">
-                </div>
-                <div class="slide">
-                    <img src="./static/gallery/artistas/Lit Killa violeta.jpg" alt="Imagen Destacada 3">
-                </div>
-            </div>
-        </section>
         <section id="sobre">
             <h2>Sobre Trap Argentino</h2>
             <p>Breve descripción del género y su impacto en la música y cultura.</p>
@@ -101,13 +138,18 @@
         </div>
     </footer>
     <script>
-        let slides = document.querySelectorAll('.slide');
-        let currentSlide = 0;
-        setInterval(() => {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }, 4000);
-    </script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+            slides[currentSlide].classList.add('active'); // El primer slide activo
+        
+            setInterval(() => {
+                slides[currentSlide].classList.remove('active'); // Remueve la clase 'active'
+                currentSlide = (currentSlide + 1) % slides.length; // Mueve al siguiente slide
+                slides[currentSlide].classList.add('active'); // Añade la clase 'active'
+            }, 4000); // Cambia cada 4 segundos
+        });
+        </script>
+        
 </body>
 </html>

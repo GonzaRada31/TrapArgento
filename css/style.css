@@ -1,68 +1,91 @@
-body {
-    font-family: Arial, sans-serif;
+/* Estilos Base */
+body, html {
+    height: 100%;
     margin: 0;
     padding: 0;
-    background: #030637; /* Fondo oscuro */
-    color: #fff; /* Texto claro */
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Asegura que padding y border están incluidos en el ancho/altura total */
 }
 
+/* Header y Slider */
 header {
-    background: #3C0753; /* Púrpura oscuro para la cabecera */
-    padding: 10px 0;
+    position: relative; /* Permite posicionar absolutamente el nav respecto a este contenedor */
+    width: 100%; /* Toma todo el ancho de la ventana */
+    padding: 10px 20px; /* Añade padding para no pegar el contenido a los bordes */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: flex-start; /* Alinea el contenido al inicio del eje cruzado */
+    justify-content: center; /* Centra el contenido a lo largo del eje principal */
 }
 
-header .logo img {
-    height: auto;
-    width: 100px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+
+/* Navegación */
+nav {
+    display: inline-flex;
+    top: 0;
+    position: relative; /* Asegura que el nav esté en la posición correcta */
+    display: inline-flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    padding: 10px 20px; /* Ajusta el padding para dar más espacio alrededor del contenido */
+    background-color: rgba(0, 15, 30, 0.45); /* Color de fondo con transparencia */
+    backdrop-filter: blur(20px); /* Desenfoque del fondo detrás del nav */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
+    border-radius: 100px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar profundidad */
+    z-index: 1000; /* Asegura que el nav esté por encima de otros elementos */
+    margin: 0 auto; /* Centrado horizontal */
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0 auto; /* Auto margins para centrar la lista */
+    padding: 0; /* Elimina el padding predeterminado */
+    display: flex; /* Asegura que los elementos de la lista estén en una sola fila */
+    /* align-items: center; Alinea los elementos verticalmente en el centro */
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin: 0 20px; /* Aumenta o reduce el espacio entre elementos si es necesario */
 }
 
 nav ul li a {
+    color: white;
     text-decoration: none;
-    color: #fff; /* Enlaces claros */
     font-weight: bold;
+    padding: 5px 20px;
+    transition: color 0.3s;
 }
 
-.slider {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+nav ul li a:hover {
+    color: #ff0000; /* Cambio de color en hover */
 }
 
-.slide {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    transition: opacity 0.5s ease;
-    opacity: 0;
+
+
+/* Logo */
+header .logo {
+    position: absolute; /* Posiciona el logo en relación con el header */
+    top: 10px;
+    left: 100px;
+    transform: translateX(0%);
+    z-index: 10;
 }
 
-.slide.active {
-    opacity: 1;
-    position: relative;
+header .logo img {
+    width: 150px;
+    height: auto;
+    display: block;
 }
 
+/* Main */
 main {
+    padding-top: calc(100vh - 50px); /* Espacio para el header */
     padding: 20px;
-    background: #720453; /* Fondo de secciones en rojo-violeta oscuro */
+    background: #720453; /* Fondo del contenido principal */
 }
 
+/* Secciones */
 .news-container, .event-container, .photo-gallery {
     display: flex;
     justify-content: space-between;
@@ -72,13 +95,51 @@ main {
 .news-container article, .event-container .event, .photo-gallery img {
     flex-basis: 49%;
     margin-bottom: 20px;
-    background: #910A67; /* Fondo para tarjetas en magenta oscuro */
+    background: #910A67;
     padding: 10px;
     border-radius: 5px;
 }
 
+/* Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 70px);
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 2s ease, transform 2s ease; /* Transiciones suaves de opacidad y transformación */
+    transform: scale(1.55); /* Un ligero zoom hacia fuera para empezar */
+    opacity: 0; /* Comenzar invisible */
+}
+
+.slide.active {
+    opacity: 1; /* Totalmente visible */
+    transform: scale(1); /* Regresa al tamaño normal */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Efecto de acercamiento para el slider activo */
+.slider .slide.active {
+    transform: scale(1.1); /* Zoom cuando está activo */
+}
+
+
+/* Footer */
 footer {
-    background: #3C0753; /* Púrpura oscuro para el pie de página */
+    background: #030637;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -89,16 +150,116 @@ footer a {
     text-decoration: none;
 }
 
+/* Media Queries */
+@media (max-width: 1024px) {
+    header .logo img {
+        width: 120px;
+    }
+}
 
-/* * {
-    /* margin: 0;
+@media (min-width: 1000px) {
+    nav ul {
+        display: flex;
+        flex-direction: row; /* Asegura que los elementos de la lista están en una sola fila */
+        justify-content: center; /* Centra los elementos horizontalmente */
+        align-items: center; /* Alinea los elementos verticalmente en el centro */
+    }
+
+    nav ul li {
+        margin: 0 20px; /* Ajusta el margen para dar espacio adecuado entre los elementos */
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        margin-top: 20px; /* Añade un espacio vertical en dispositivos móviles */
+    }
+
+    .news-container, .event-container, .photo-gallery {
+        flex-direction: column;
+    }
+
+    .news-container article, .event-container .event, .photo-gallery img {
+        flex-basis: 100%;
+    }
+    nav ul li {
+        margin: 10px 0; /* Reduce el espacio horizontal y aumenta el vertical en dispositivos móviles */
+    }
+}
+@media (max-width: 480px) {
+    header .logo img {
+        width: 80px;
+    }
+}
+
+/* Línea de tiempo */
+.panoptikum-timeline {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px; /* Espacio adicional desde la parte superior */
+}
+
+.panoptikum-timeline__items {
+    list-style: none;
     padding: 0;
-    box-sizing: border-box; */
-/* } */
-/* h2 {
-    color: #eef3ed;
+}
+
+.panoptikum-timeline__item {
+    margin: 10px 0;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.panoptikum-timeline__item--active {
+    background-color: #ff0000; /* Rojo para elementos activos */
+}
+
+.panoptikum-timeline__progress-bar-mask {
+    height: 10px;
+    width: 100%;
+    background-color: #ccc;
+    overflow: hidden;
+}
+
+.panoptikum-timeline__progress-bar {
+    height: 100%;
+    background-color: #0000ff; /* Azul para la barra de progreso */
+    width: 0%; /* Comienza sin relleno */
+    transition: width 2s ease-out;
+}
+
+.panoptikum-timeline__item-title {
+    padding: 10px;
+    color: #000;
     font-size: 16px;
-    font-weight: 400;
-    margin: 0 0 0.5em;
-    text-align: center;    
-} */
+}
+
+.timeline {
+    width: 100%;
+    position: absolute;
+    bottom: 0; /* Posición justo sobre el main */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.timeline-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.progress-bar {
+    height: 5px;
+    background: red;
+    width: 0%; /* Inicialmente no mostrado */
+    transition: width 2s ease-out;
+}
+
+.item-title {
+    padding-top: 5px;
+}
