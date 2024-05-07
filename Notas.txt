@@ -1,14 +1,11 @@
-Artistas:
-Duki
-Thiago PZK
-Trueno
-Paulo Londra
-Bizarrap
-Wos
+Recursos:
+Paleta de colores:
+                    https://paletadecolores.online/
+                    https://color.adobe.com/es/create/color-wheel
+                Seleccionado    https://colorhunt.co/palette/0306373c0753720455910a67
 
-Maria Becerra
-Emilia Mernes
-Nicki Nicole
-Tini 
-Nathy Peluso
-Cazzu
+
+Artistas:
+Duki    Thiago PZK  Trueno  Paulo Londra    Bizarrap    Wos
+
+Maria Becerra   Emilia Mernes   Nicki Nicole    Tini    Nathy Peluso    Cazzu

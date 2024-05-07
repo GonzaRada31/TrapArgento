@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trap Argentino</title>
-    <link rel="icon" type="image/ico" href="./static/icons/TrapArgento.png">
+    <link rel="icon" type="image/png" href="./static/favicon.png">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -12,22 +12,22 @@
     <header class="slider">
         <!-- Slider con múltiples imágenes de artistas -->
         <div class="slide" id="slide1">
-            <img src="./static/gallery/artistas/Duki Blanco.jpg" alt="Imagen Destacada 1">
+            <img src="./static/gallery/SVG/Duki.svg" alt="Imagen Destacada 1">
         </div>
         <div class="slide" id="slide2">
-            <img src="./static/gallery/artistas/Emilia Mernes Tapa.jpg" alt="Imagen Destacada 2">
+            <img src="./static/gallery/SVG/Emilia Mernes.svg" alt="Imagen Destacada 2">
         </div>
         <div class="slide" id="slide3">
-            <img src="./static/gallery/artistas/Lit Killa violeta.jpg" alt="Imagen Destacada 3">
+            <img src="./static/gallery/SVG/Thiago PZK.svg" alt="Imagen Destacada 3">
         </div>
         <div class="slide" id="slide4">
-            <img src="./static/gallery/artistas/Cazzu Casual.jpg" alt="Imagen Destacada 4">
+            <img src="./static/gallery/SVG/Cazzu Tapa.svg" alt="Imagen Destacada 4">
         </div>
         <div class="slide" id="slide5">
-            <img src="./static/gallery/artistas/Nicki Nicole Vivo.jpg" alt="Imagen Destacada 5">
+            <img src="./static/gallery/SVG/Maria Becerra.svg" alt="Imagen Destacada 5">
         </div>
         <div class="slide" id="slide6">
-            <img src="./static/gallery/artistas/Bizzarap y duki.jpg" alt="Imagen Destacada 6">
+            <img src="./static/gallery/SVG/Trueno.svg" alt="Imagen Destacada 6">
         </div>
         <!-- Navegación con enlaces a secciones de la página -->
         <nav>
@@ -40,42 +40,61 @@
         </nav>
         <!-- Logo del sitio web -->
         <div class="logo">
-            <img src="./static/icons/Trap Argento Oficial.webp" alt="Trap Argentino Logo">
+            <img src="./static/icons/favicon.png" alt="Trap Argentino Logo">
         </div>
         <!-- Timeline con miniaturas de artistas -->
         <div class="timeline">
-            <div class="timeline-item" data-target="slide1">
-                <div class="progress-bar"></div>
+            <div class="timeline-item" data-target="slide1"> <!-- Enlaza con el slide 1 -->
+                <div class="progress-bar-mask"> <!-- Máscara de la barra de progreso -->
+                    <div class="progress-bar"></div>    <!-- Barra de progreso -->
+                </div>
                 <div class="item-title">Duki Blanco</div>
             </div>
+
             <div class="timeline-item" data-target="slide2">
-                <div class="progress-bar"></div>
-                <div class="item-title">Emilia Mernes Tapa</div>
+                <div class="progress-bar-mask">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="item-title">Emilia Mernes</div>
             </div>
+
             <div class="timeline-item" data-target="slide3">
-                <div class="progress-bar"></div>
-                <div class="item-title">Lit Killa violeta</div>
+                <div class="progress-bar-mask">
+                    <div class="progress-bar"></div>
+                </div>                
+                <div class="item-title">Thiago PZK</div>
             </div>
+
             <div class="timeline-item" data-target="slide4">
-                <div class="progress-bar"></div>
-                <div class="item-title">Cazzu Casual</div>
+                <div class="progress-bar-mask">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="item-title">Cazzu</div>
             </div>
+
             <div class="timeline-item" data-target="slide5">
-                <div class="progress-bar"></div>
-                <div class="item-title">Nicki Nicole Vivo</div>
+                <div class="progress-bar-mask">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="item-title">Maria Becerra</div>
             </div>
+
             <div class="timeline-item" data-target="slide6">
-                <div class="progress-bar"></div>
-                <div class="item-title">Bizzarap y duki</div>
+                <div class="progress-bar-mask">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="item-title">Trueno</div>
             </div>
         </div>
         
     </header>
     <main>
+        <h1>Trap Argentino</h1>
         <section id="sobre">
-            <h2>Sobre Trap Argentino</h2>
-            <p>Breve descripción del género y su impacto en la música y cultura.</p>
+            <!-- <h2>Sobre Trap Argentino</h2> -->
+            <!-- <p>Breve descripción del género y su impacto en la música y cultura.</p> -->
         </section>
+
         <section id="ultimas-noticias">
             <h2>Últimas Noticias</h2>
             <div class="news-container">
@@ -89,6 +108,7 @@
                 </article>
             </div>
         </section>
+
         <section id="eventos-destacados">
             <h2>Eventos Destacados</h2>
             <div class="event-container">
@@ -102,6 +122,7 @@
                 </div>
             </div>
         </section>
+
         <section id="galeria-fotos">
             <h2>Galería de Fotos</h2>
             <div class="photo-gallery">
@@ -110,6 +131,7 @@
             </div>
         </section>
     </main>
+
     <aside>
         <div class="social-media-links">
             <h2>Síguenos</h2>

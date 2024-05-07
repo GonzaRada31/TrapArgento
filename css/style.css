@@ -5,27 +5,25 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
     box-sizing: border-box; /* Asegura que padding y border están incluidos en el ancho/altura total */
+    overflow-x: hidden; /* Oculta desbordamiento horizontal */
 }
 
 /* Header y Slider */
 header {
     position: relative; /* Permite posicionar absolutamente el nav respecto a este contenedor */
     width: 100%; /* Toma todo el ancho de la ventana */
-    padding: 10px 20px; /* Añade padding para no pegar el contenido a los bordes */
+    padding: 20px 20px; /* Añade padding para no pegar el contenido a los bordes */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    z-index: 1000;
-    display: flex;
+    z-index: 1000;  /* Asegura que el header esté por encima de otros elementos */
+    display: flex;  /* Asegura que los elementos del header estén en una sola fila */
     align-items: flex-start; /* Alinea el contenido al inicio del eje cruzado */
     justify-content: center; /* Centra el contenido a lo largo del eje principal */
 }
 
-
 /* Navegación */
 nav {
-    display: inline-flex;
-    top: 0;
     position: relative; /* Asegura que el nav esté en la posición correcta */
-    display: inline-flex;
+    display: inline-flex; /* Asegura que los elementos de la lista estén en una sola fila */
     justify-content: center; /* Centra los elementos horizontalmente */
     padding: 10px 20px; /* Ajusta el padding para dar más espacio alrededor del contenido */
     background-color: rgba(0, 15, 30, 0.45); /* Color de fondo con transparencia */
@@ -40,9 +38,7 @@ nav {
 nav ul {
     list-style: none; /* Elimina los puntos de la lista */
     margin: 0 auto; /* Auto margins para centrar la lista */
-    padding: 0; /* Elimina el padding predeterminado */
     display: flex; /* Asegura que los elementos de la lista estén en una sola fila */
-    /* align-items: center; Alinea los elementos verticalmente en el centro */
 }
 
 nav ul li {
@@ -60,8 +56,6 @@ nav ul li a {
 nav ul li a:hover {
     color: #ff0000; /* Cambio de color en hover */
 }
-
-
 
 /* Logo */
 header .logo {
@@ -85,6 +79,33 @@ main {
     background: #720453; /* Fondo del contenido principal */
 }
 
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.image-info h3, .image-info p {
+    margin: 5px 0;
+}
+
 /* Secciones */
 .news-container, .event-container, .photo-gallery {
     display: flex;
@@ -102,10 +123,10 @@ main {
 
 /* Slider */
 .slider {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 70px);
-    overflow: hidden;
+    position:relative;
+    width:100%;
+    height:calc(100vh - 70px);
+    overflow:hidden;
 }
 
 .slide {
@@ -114,7 +135,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: opacity 2s ease, transform 2s ease; /* Transiciones suaves de opacidad y transformación */
+    transition: opacity 4s ease, transform 4s ease; /* Transiciones suaves de opacidad y transformación */
     transform: scale(1.55); /* Un ligero zoom hacia fuera para empezar */
     opacity: 0; /* Comenzar invisible */
 }
@@ -130,12 +151,10 @@ main {
     object-fit: cover;
 }
 
-
 /* Efecto de acercamiento para el slider activo */
 .slider .slide.active {
     transform: scale(1.1); /* Zoom cuando está activo */
 }
-
 
 /* Footer */
 footer {
@@ -150,7 +169,7 @@ footer a {
     text-decoration: none;
 }
 
-/* Media Queries */
+/* Media Queries para diferentes dispositivos */
 @media (max-width: 1024px) {
     header .logo img {
         width: 120px;
@@ -159,9 +178,7 @@ footer a {
 
 @media (min-width: 1000px) {
     nav ul {
-        display: flex;
         flex-direction: row; /* Asegura que los elementos de la lista están en una sola fila */
-        justify-content: center; /* Centra los elementos horizontalmente */
         align-items: center; /* Alinea los elementos verticalmente en el centro */
     }
 
@@ -171,70 +188,35 @@ footer a {
 }
 
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        margin-top: 20px; /* Añade un espacio vertical en dispositivos móviles */
+    /* Ajustes para tabletas y dispositivos móviles más grandes */
+    nav, nav ul {
+        display: none; /* Oculta la navegación en dispositivos móviles */
+    }
+
+    header .logo {
+        left: 50%; /* Mueve el logo al 50% de la anchura del contenedor */
+        transform: translateX(-50%); /* Centra el logo exactamente en el medio */
+        top: 10px; /* Mantiene la altura vertical */
+    }
+
+    header .logo img {
+        width: 80px; /* Ajusta el tamaño del logo para dispositivos móviles */
     }
 
     .news-container, .event-container, .photo-gallery {
-        flex-direction: column;
+        flex-direction: column; /* Ajusta el diseño de las secciones para una sola columna */
     }
 
     .news-container article, .event-container .event, .photo-gallery img {
-        flex-basis: 100%;
-    }
-    nav ul li {
-        margin: 10px 0; /* Reduce el espacio horizontal y aumenta el vertical en dispositivos móviles */
+        flex-basis: 100%; /* Ajusta los elementos para tomar todo el ancho disponible */
     }
 }
+
 @media (max-width: 480px) {
+    /* Ajustes para teléfonos móviles */
     header .logo img {
         width: 80px;
     }
-}
-
-/* Línea de tiempo */
-.panoptikum-timeline {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px; /* Espacio adicional desde la parte superior */
-}
-
-.panoptikum-timeline__items {
-    list-style: none;
-    padding: 0;
-}
-
-.panoptikum-timeline__item {
-    margin: 10px 0;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.panoptikum-timeline__item--active {
-    background-color: #ff0000; /* Rojo para elementos activos */
-}
-
-.panoptikum-timeline__progress-bar-mask {
-    height: 10px;
-    width: 100%;
-    background-color: #ccc;
-    overflow: hidden;
-}
-
-.panoptikum-timeline__progress-bar {
-    height: 100%;
-    background-color: #0000ff; /* Azul para la barra de progreso */
-    width: 0%; /* Comienza sin relleno */
-    transition: width 2s ease-out;
-}
-
-.panoptikum-timeline__item-title {
-    padding: 10px;
-    color: #000;
-    font-size: 16px;
 }
 
 .timeline {
@@ -253,11 +235,22 @@ footer a {
     color: white;
 }
 
+.progress-bar-mask {
+    width: 100%; /* Toma todo el ancho del elemento padre */
+    background-color: #ccc; /* Fondo gris para la máscara */
+    height: 5px; /* Altura visible de la máscara */
+    position: relative; /* Necesario para el posicionamiento de la barra de progreso */
+    overflow: hidden; /* Esconde cualquier parte de la barra que exceda el ancho inicial */
+}
+
 .progress-bar {
-    height: 5px;
-    background: red;
-    width: 0%; /* Inicialmente no mostrado */
-    transition: width 2s ease-out;
+    background: red; /* Color rojo para la barra de progreso */
+    height: 100%; /* La altura de la barra es la misma que la de la máscara */
+    width: 0%; /* Inicio sin relleno */
+    position:absolute; /* Posicionamiento absoluto respecto a su padre */
+    left: 0; /* Alineado al lado izquierdo de la máscara */
+    top: 0; /* Alineado al tope de la máscara */
+    transition: width 4s linear; /* Transición suave durante 4 segundos */
 }
 
 .item-title {

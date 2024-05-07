@@ -1,26 +1,39 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Selecciona todos los elementos de la línea de tiempo
+    const slides = document.querySelectorAll('.slide');
     const timelineItems = document.querySelectorAll('.timeline-item');
+    const progressBarMasks = document.querySelectorAll('.progress-bar-mask .progress-bar');
 
-    // Añade eventos de click a cada elemento de la línea de tiempo
+    let currentSlide = 0;
+    activateSlideAndProgress(currentSlide);
+
+    setInterval(() => {
+        changeSlide((currentSlide + 1) % slides.length);
+    }, 4000);
+
     timelineItems.forEach(item => {
-        item.addEventListener('click', function() {
-            // Reinicia todos los slides y barras de progreso
-            document.querySelectorAll('.slide').forEach(slide => {
-                slide.classList.remove('active');
-                slide.querySelector('.progress-bar').style.width = '0%'; // Asegúrate de que cada slide tiene una barra de progreso
-            });
-
-            // Activa el slide correspondiente
+        item.addEventListener('click', () => {
             const targetId = item.getAttribute('data-target');
-            document.getElementById(targetId).classList.add('active');
-
-            // Anima la barra de progreso del item activo
-            item.querySelector('.progress-bar').style.width = '100%';
+            const targetIndex = Array.from(slides).findIndex(slide => slide.id === targetId);
+            if (targetIndex !== -1) changeSlide(targetIndex);
         });
     });
 
-    // Configuración inicial para mostrar el primer slide y la barra de progreso
-    document.getElementById('slide1').classList.add('active');
-    document.querySelector('.timeline-item[data-target="slide1"] .progress-bar').style.width = '100%';
+    function changeSlide(newIndex) {
+        if (currentSlide !== newIndex) {
+            progressBarMasks[currentSlide].style.width = '0%';  // Resetear la barra de progreso actual
+            slides[currentSlide].classList.remove('active');
+            timelineItems[currentSlide].classList.remove('active');
+
+            currentSlide = newIndex; // Actualizar el índice de la diapositiva actual
+            activateSlideAndProgress(currentSlide);
+        }
+    }
+
+    function activateSlideAndProgress(index) {
+        slides[index].classList.add('active');
+        timelineItems[index].classList.add('active');
+        setTimeout(() => { // Esperar un poco antes de iniciar la animación de la barra de progreso
+            progressBarMasks[index].style.width = '100%';
+        }, 100); // Un pequeño retardo puede ayudar a reiniciar correctamente la animación de la barra
+    }
 });
