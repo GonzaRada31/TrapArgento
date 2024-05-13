@@ -76,7 +76,8 @@ header .logo img {
 main {
     padding-top: calc(100vh - 50px); /* Espacio para el header */
     padding: 20px;
-    background: #720453; /* Fondo del contenido principal */
+    background: #720455; /* Fondo del contenido principal */
+
 }
 
 .image-container {
@@ -156,6 +157,75 @@ main {
     transform: scale(1.1); /* Zoom cuando está activo */
 }
 
+.asideSection{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+.left-section{
+    flex: 0.5; /* Ocupa un poco menos de un  tercio del espacio disponible */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+}
+
+.right-section {
+    flex: 1;
+    
+}
+.right-section h2{
+    font-size: 18px;
+    text-align: center;
+}
+.center-question {
+    flex: 1; /* Ocupa un tercio del espacio disponible */
+    text-align: center;
+    font-size: 18px;
+}
+
+.social-media-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-media-links img {
+    width: 24px;
+    height: 24px;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center; /* Alinea horizontalmente al centro */
+}
+
+input[type="email"] {
+    width: 80%; /* Ocupa todo el ancho disponible */
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: #3a0073;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
 /* Footer */
 footer {
     background: #030637;
@@ -194,7 +264,7 @@ footer a {
     }
 
     header .logo {
-        left: 50%; /* Mueve el logo al 50% de la anchura del contenedor */
+        left: 15%; /* Mueve el logo al 50% de la anchura del contenedor */
         transform: translateX(-50%); /* Centra el logo exactamente en el medio */
         top: 10px; /* Mantiene la altura vertical */
     }
@@ -209,6 +279,18 @@ footer a {
 
     .news-container article, .event-container .event, .photo-gallery img {
         flex-basis: 100%; /* Ajusta los elementos para tomar todo el ancho disponible */
+    }
+    .asideSection {
+        width: auto;
+        flex-direction: column; /* Cambia la disposición a vertical en pantallas pequeñas */
+    }
+    .asideSection h2{
+        font-size: 16px;
+    }
+    .left-section, .right-section {
+        flex: none; /* No estira los elementos */
+        width: 100%; /* Ocupa el ancho completo */
+        margin-bottom: 10px; /* Espacio entre los elementos */
     }
 }
 
@@ -256,6 +338,8 @@ footer a {
 .item-title {
     padding-top: 5px;
 }
+
+
 /* page MULTIMEDIA HTML2 */
 
 .portada {
@@ -274,3 +358,211 @@ footer a {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* Degradado de transparente a negro */
 }
 
+
+/* page LOGIN */
+.header-login{
+    background-color: #030637;
+}
+
+.main {
+    display: flex;
+    margin: 0;
+    height: 100vh;
+}
+
+/* Estilos para el menú hamburguesa */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 5px;
+    width: 30px;
+}
+
+/* Estilos para los enlaces de navegación */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 10px;
+}
+
+#imagen-lado {
+    background-image: url('../static/gallery/banner/collage.png');
+    background-size: cover;
+    background-position: center;
+    width: 60%;
+    height: 100vh;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100vh;
+    background-color: #3C0753;
+    color: white;
+}
+
+#login-form h1 {
+    margin-bottom: 20px;
+}
+
+#login-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.068);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(255, 84, 224, 0.889);
+    margin-bottom: 20px;
+}
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-container img {
+    margin-right: 10px;
+    height: 20px;
+    width: auto;
+}
+
+#login-form input {
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    width: 100%;
+    color: #030637;
+    background: transparent;
+}
+
+#login-form button {
+    background-color: rgb(255, 72, 194);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#login-form button:hover {
+    background-color: #ff00bf;
+    box-shadow: 0px 5px 10px 0px rgb(255, 74, 195);
+}
+
+#login-form p {
+    color: white;
+    font-size: 14px;
+}
+
+#login-form a {
+    color: #e600ff;
+    font-size: 14px;
+}
+
+/* Tamaño por defecto pantallas (1280-1024) */
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    #imagen-lado {
+        width: 60%;
+    }
+    #login-form {
+        width: 40%;
+    }
+}
+
+/* Tamaño tablet horizontal (1024-768) */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    #imagen-lado {
+        width: 60%;
+    }
+    #login-form {
+        width: 40%;
+    }
+}
+
+/* Tamaño tablet (768-480) */
+@media all and (min-width: 480px) and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        background: #333;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path: circle(100px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+
+    .nav-links.open {
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #login-form, #imagen-lado {
+        width: 100%;
+    }
+    .main {
+        flex-direction: column;
+    }
+}
+
+/* Tamaño teléfonos (480-menos ) */
+@media all and (max-width: 480px) {
+    .nav-links {
+        position: absolute;
+        background: #333;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path: circle(100px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+
+    .nav-links.open {
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #login-form, #imagen-lado {
+        width: 100%;
+    }
+    .main {
+        flex-direction: column;
+    }
+    #login-form h1, #login-form p {
+        font-size: 18px;
+    }
+    .input-container img {
+        height: 15px;
+    }
+}

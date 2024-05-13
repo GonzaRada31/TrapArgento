@@ -31,6 +31,11 @@
         </div>
         <!-- Navegación con enlaces a secciones de la página -->
         <nav>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul>
                 <li><a href="#artistas">Artistas</a></li>
                 <li><a href="#eventos">Eventos</a></li>
@@ -131,17 +136,19 @@
             </div>
         </section>
     </main>
-
-    <aside>
-        <div class="social-media-links">
+    <aside class="asideSection">
+        <div class="left-section">
             <h2>Síguenos</h2>
-            <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
-            <a href="#">Facebook</a>
+            <div class="social-media-links">
+                <a href="#"><img src="./static/gallery/logosRedes/facebook.png" alt="logo facebook"></a>
+                <a href="#"><img src="./static/gallery/logosRedes/instagram.png" alt="logo instagram"></a>
+                <a href="#"><img src="./static/gallery/logosRedes/whatsapp.png" alt="logo whatsapp"></a>
+            </div>
         </div>
-        <div class="newsletter">
+        <h2 class="center-question">Querés recibir las últimas novedades de tus artistas favoritos?</h2>
+        <div class="right-section">
             <h2>Suscríbete</h2>
-            <form>
+            <form class="newsletter">
                 <input type="email" placeholder="Tu correo electrónico">
                 <button type="submit">Suscribir</button>
             </form>
@@ -155,9 +162,9 @@
             <a href="#privacidad">Política de privacidad</a>
             <a href="#terminos">Términos de uso</a>
         </div>
-        <div class="social-media-footer">
+        <!-- <div class="social-media-footer">
             <h3>Síguenos en redes sociales:</h3>
-        </div>
+        </div> -->
     </footer>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
