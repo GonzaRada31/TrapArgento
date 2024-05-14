@@ -21,7 +21,7 @@
             <img src="./static/gallery/SVG/Thiago PZK.svg" alt="Imagen Destacada 3">
         </div>
         <div class="slide" id="slide4">
-            <img src="./static/gallery/SVG/Cazzu Tapa.svg" alt="Imagen Destacada 4">
+            <img src="./static/gallery/SVG/Cazzu.svg" alt="Imagen Destacada 4">
         </div>
         <div class="slide" id="slide5">
             <img src="./static/gallery/SVG/Maria Becerra.svg" alt="Imagen Destacada 5">
@@ -90,44 +90,30 @@
     </header>
     <main>
         <h1>Trap Argentino</h1>
-        <section id="sobre">
-            <!-- <h2>Sobre Trap Argentino</h2> -->
-            <!-- <p>Breve descripción del género y su impacto en la música y cultura.</p> -->
-        </section>
-
-        <section id="ultimas-noticias">
-            <h2>Últimas Noticias</h2>
-            <div class="news-container">
-                <article>
-                    <h3>Noticia 1</h3>
-                    <p>Descripción breve de la noticia.</p>
-                </article>
-                <article>
-                    <h3>Noticia 2</h3>
-                    <p>Descripción breve de la noticia.</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="eventos-destacados">
-            <h2>Eventos Destacados</h2>
-            <div class="event-container">
-                <div class="event">
-                    <h3>Evento 1</h3>
-                    <p>Detalles del evento.</p>
-                </div>
-                <div class="event">
-                    <h3>Evento 2</h3>
-                    <p>Detalles del evento.</p>
+        <section class="content-section">
+            <div class="image-container">
+                <img src="../TrapArgento/static/gallery/artistas/Bizzarap y duki.jpg" alt="Foto 1">
+                <div class="image-info">
+                    <h3>Título Evento 1</h3>
+                    <p>Fecha del Evento</p>
+                    <p>Descripción breve del evento.</p>
                 </div>
             </div>
-        </section>
-
-        <section id="galeria-fotos">
-            <h2>Galería de Fotos</h2>
-            <div class="photo-gallery">
-                <img src="foto1.jpg" alt="Foto 1">
-                <img src="foto2.jpg" alt="Foto 2">
+            <div class="image-container">
+                <img src="../TrapArgento/static/gallery/artistas/Lit Killa.jpg" alt="Foto 2">
+                <div class="image-info">
+                    <h3>Título Evento 2</h3>
+                    <p>Fecha del Evento</p>
+                    <p>Descripción breve del evento.</p>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="/static/gallery/artistas/Paulo Londra Vivo.jpg" alt="Foto 3">
+                <div class="image-info">
+                    <h3>Título Evento 3</h3>
+                    <p>Fecha del Evento</p>
+                    <p>Descripción breve del evento.</p>
+                </div>
             </div>
         </section>
     </main>
@@ -159,8 +145,9 @@
             <h3>Síguenos en redes sociales:</h3>
         </div>
     </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
+    <script src="./js/main.js" defer></script>
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function() {  // Espera a que el DOM esté cargado
             let slides = document.querySelectorAll('.slide');
             let currentSlide = 0;
             slides[currentSlide].classList.add('active'); // El primer slide activo
@@ -171,7 +158,7 @@
                 slides[currentSlide].classList.add('active'); // Añade la clase 'active'
             }, 4000); // Cambia cada 4 segundos
         });
-        </script>
+    </script> -->
         
 </body>
 </html>
