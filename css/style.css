@@ -77,7 +77,8 @@ header .logo img {
 main {
     padding-top: calc(100vh - 50px); /* Espacio para el header */
     padding: 20px;
-    background: #720453; /* Fondo del contenido principal */
+    background: #720455; /* Fondo del contenido principal */
+
 }
 
 .image-container {
@@ -157,6 +158,75 @@ main {
     transform: scale(1.1); /* Zoom cuando está activo */
 }
 
+.asideSection{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+.left-section{
+    flex: 0.5; /* Ocupa un poco menos de un  tercio del espacio disponible */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+}
+
+.right-section {
+    flex: 1;
+    
+}
+.right-section h2{
+    font-size: 18px;
+    text-align: center;
+}
+.center-question {
+    flex: 1; /* Ocupa un tercio del espacio disponible */
+    text-align: center;
+    font-size: 18px;
+}
+
+.social-media-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-media-links img {
+    width: 24px;
+    height: 24px;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center; /* Alinea horizontalmente al centro */
+}
+
+input[type="email"] {
+    width: 80%; /* Ocupa todo el ancho disponible */
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: #3a0073;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
 /* Footer */
 footer {
     background: #030637;
@@ -195,7 +265,7 @@ footer a {
     }
 
     header .logo {
-        left: 50%; /* Mueve el logo al 50% de la anchura del contenedor */
+        left: 15%; /* Mueve el logo al 50% de la anchura del contenedor */
         transform: translateX(-50%); /* Centra el logo exactamente en el medio */
         top: 10px; /* Mantiene la altura vertical */
     }
@@ -210,6 +280,18 @@ footer a {
 
     .news-container article, .event-container .event, .photo-gallery img {
         flex-basis: 100%; /* Ajusta los elementos para tomar todo el ancho disponible */
+    }
+    .asideSection {
+        width: auto;
+        flex-direction: column; /* Cambia la disposición a vertical en pantallas pequeñas */
+    }
+    .asideSection h2{
+        font-size: 16px;
+    }
+    .left-section, .right-section {
+        flex: none; /* No estira los elementos */
+        width: 100%; /* Ocupa el ancho completo */
+        margin-bottom: 10px; /* Espacio entre los elementos */
     }
 }
 
@@ -257,39 +339,3 @@ footer a {
 .item-title {
     padding-top: 5px;
 }
-
-/* ESTILO PARA EL MAIN */
-.event-card {
-    display: flex;
-    background: #fff; /* Color de fondo de la tarjeta */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra ligera */
-    overflow: hidden; /* Asegura que todo quede dentro de los bordes redondeados */
-}
-
-.event-artwork .image {
-    width: 100%;
-    height: 200px; /* Ajusta según necesidad */
-    background-size: cover;
-    background-position: center;
-}
-
-.event-content {
-    padding: 10px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.event-header .event-title {
-    font-size: 1.2em;
-    color: #333;
-}
-
-.event-info {
-    font-size: 0.9em;
-    color: #666;
-}
-
-/* Añade estilos para .event-actions y otros elementos según necesites */

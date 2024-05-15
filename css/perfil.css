@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-variation-settings: normal;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.container-perfil {
+    margin-bottom: 0.5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('https://akamai.sscdn.co/uploadfile/letras/fotos/2/a/5/1/2a51d48b89abc929004e1f320f08337c.jpg'); /* URL de la imagen */
+    background-color: #4a5568;
+    
+    background-size: cover; /* Hace que la imagen ocupe todo el contenedor sin distorsionarla */
+}
+
+/* background-blend-mode: multiply; */
+
+
+.content-perfil {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    text-align: center;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.title-perfil {
+    margin-bottom: 1rem; 
+    font-size: 2.25rem; 
+    font-weight: bold; 
+    letter-spacing: -0.025em; 
+    line-height: 1; 
+    color: #ffffff;
+}
+
+
+
+@media (min-width: 1024px) {
+    .title {
+        font-size: 3.75rem; 
+    };
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .content-perfil {
+      padding-top: 6rem; /* Ajuste del espacio superior */
+      flex-direction: column; /* Cambio de dirección de flexbox para apilar elementos */
+      align-items: flex-start; /* Alinear elementos a la izquierda */
+      display: table-caption;
+    }
+
+    .title-perfil {
+      margin-bottom: 1rem; /* Mantener un pequeño espacio inferior */
+      font-size: 1.5rem; /* Reducir el tamaño de la fuente para dispositivos móviles */
+      font-weight: normal; /* Opcional: cambiar el peso de la fuente */
+      color: #ffffff; /* Mantener el color blanco del texto */
+      text-align: left; /* Alinear el texto a la izquierda */
+    }
+}
+
+
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    padding: 1rem;
+    background-color: #ffffff;
+    margin: 2rem;
+    display: inline-block;
+    
+}
+
+/* Encabezado */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem; 
+}
+
+.header h5 {
+    font-size: 1.25rem; 
+    font-weight: bold; 
+    line-height: 1; 
+    color: #1a202c; 
+}
+
+.header a {
+    font-size: 0.875rem; 
+    font-weight: medium; 
+    color: #3b82f6; 
+    text-decoration: none;
+}
+
+.header a:hover {
+    text-decoration: underline; 
+}
+
+/* Lista de canciones */
+.song-list {
+    overflow: hidden; 
+}
+
+.song-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.song-list li {
+    padding-top: 0.75rem; 
+    padding-bottom: 1rem; 
+}
+
+.song-list .flex {
+    display: flex;
+    align-items: center;
+}
+
+.song-list .flex-1 {
+    flex: 1;
+    min-width: 0; 
+    margin-left: 1rem; 
+}
+
+.song-list .letra-list{
+    font-size: 0.875rem; 
+    color: #4a5568; 
+}
+
+.song-list .time-letra {
+    font-size: 1rem; 
+    font-weight: bold; 
+    color: #1a202c; 
+}
+
+
+
+.navbar {
+    position: relative;
+    display: table;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 15, 30, 0.45);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 125px;
+    height: auto;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 3px;
+}
+
+
+
+
+
+/* Contenedor principal disco*/
+.container-disco {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    justify-items: start;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado */
+.header-disco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem; 
+}
+
+.header-disco h5 {
+    align-items: center;
+    font-size: 1.25rem; 
+    font-weight: bold; 
+    line-height: 1; 
+    color: #1a202c; 
+}
+
+
+
+
+/* Grid de imágenes */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem; 
+}
+
+/* Imágenes */
+.image-grid img {
+    height: auto;
+    max-width: 100%; 
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.image-grid img:hover {
+    transform: scale(1.1); /* Ajusta el factor de escala según tu preferencia */
+}
+
+@media only screen and (max-width: 768px) {
+    .image-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr)); /* Cambia a dos columnas en dispositivos móviles */
+    }
+
+    .container-disco {
+        display: grid;
+        gap: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        padding: 1rem;
+        justify-items: center;
+    }
+
+    .image-grid img:hover {
+        transform: scale(1.1); /* Ajusta el factor de escala según tu preferencia */
+    }
+}  
+
+/* Estilos personalizados */
+.footer {
+    background-color: #030637;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+.container2 {
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 2rem;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    white-space: nowrap;
+    
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    
+    color: #fff;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin-right: 1rem;
+}
+
+
+/* Para hacer clic en enlaces */
+a {
+    text-decoration: none;
+    color: inherit;
+    list-style: none;
+
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+.hero {
+    background-color: #fff;
+    color: #333;
+    position: relative;
+}
+
+.containers {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero__title {
+    margin-bottom: 1rem;
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.hero__description {
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.gradient {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}

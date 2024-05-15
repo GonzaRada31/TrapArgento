@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" type="image/png" href="../static/favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header-login">
+        <!-- Navegación con enlaces a secciones de la página -->
+        <nav>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="#artistas">Artistas</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="../pages/multimedia.html">Multimedia</a></li>
+                <li><a href="#noticias">Noticias</a></li>
+            </ul>
+        </nav>
+        <!-- Logo del sitio web -->
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../static/icons/favicon.png" alt="Trap Argentino Logo">
+            </a>
+        </div>
+    </header>
+    <main class="main">
+        <div id="imagen-lado"></div>
+    <div id="login-form">
+        <h1>Login</h1>
+        <form>
+            <div class="input-container">
+                <img src="../static/gallery/login/bandeja-de-entrada.png" alt="Mail Icon">
+                <input type="text" placeholder="Usuario" required>
+            </div>
+            <div class="input-container">
+                <img src="../static/gallery/login/clave.png" alt="Password Icon">
+                <input type="password" placeholder="Contraseña" required>
+            </div>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+        <p>No tenés cuenta? <a href="#">Registrate acá</a></p>
+    </div>
+    </main>
+    <aside class="asideSection">
+        <div class="left-section">
+            <h2>Síguenos</h2>
+            <div class="social-media-links">
+                <a href="#"><img src="../static/gallery/logosRedes/facebook.png" alt="logo facebook"></a>
+                <a href="#"><img src="../static/gallery/logosRedes/instagram.png" alt="logo instagram"></a>
+                <a href="#"><img src="../static/gallery/logosRedes/whatsapp.png" alt="logo whatsapp"></a>
+            </div>
+        </div>
+        <h2 class="center-question">Querés recibir las últimas novedades de tus artistas favoritos?</h2>
+        <div class="right-section">
+            <h2>Suscríbete</h2>
+            <form class="newsletter">
+                <input type="email" placeholder="Tu correo electrónico">
+                <button type="submit">Suscribir</button>
+            </form>
+        </div>
+    </aside>
+    <footer>
+        <div class="contact-info">
+            <p>Contacto: info@trapargentino.com</p>
+        </div>
+        <div class="additional-links">
+            <a href="#privacidad">Política de privacidad</a>
+            <a href="#terminos">Términos de uso</a>
+        </div>
+        <!-- <div class="social-media-footer">
+            <h3>Síguenos en redes sociales:</h3>
+        </div> -->
+    </footer>
+    <script src="../js/menu.js"></script>
+</body>
+</html>
