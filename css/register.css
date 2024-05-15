@@ -1,0 +1,110 @@
+* {
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Asegura que la altura mínima sea la del viewport */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/body2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
+header .logo img {
+    width: 100px; /* Ajustar según necesario */
+}
+
+main {
+    width: 100%;
+    flex-grow: 1; /* Permite que el main ocupe el espacio restante */
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    padding: 40px 20px 20px; /* Añade padding arriba para no superponer con el header */
+}
+
+article {
+    background-color: rgba(114, 4, 85, 0.9); /* Oscureciendo el fondo */
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+form {
+    width: 100%;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 30px;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+button[type="submit"], button[type="reset"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #720455; /* Ajustar al color deseado */
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover, button[type="reset"]:hover {
+    background-color: #910A67;
+}
+
+p, a {
+    text-align: center;
+    color: #ccc;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+
+    header .logo img {
+        width: 80px;
+    }
+
+    main {
+        padding-top: 100px; /* Aumenta el padding superior en móviles */
+    }
+
+    form {
+        padding: 0 5%;
+    }
+}
