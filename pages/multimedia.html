@@ -18,6 +18,11 @@
                 <li><a href="#noticias">Noticias</a></li>
             </ul>
         </nav>
+        <video id="video-portada" playsinline muted>
+            <source src="../static/portada/duki2.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+        <h1 id="titulo" style="display: none">Escuchá lo mejor del Trap Argentino</h1>
         <!-- Logo del sitio web -->
         <div class="logo">
             <a href="../index.html">
@@ -26,75 +31,115 @@
         </div>
     </header>
     <main>
-        <h1>Trap Argentino</h1>
         <section id="musica">
-            <h2>Musica</h2>
-            <p>Escuchá lo ultimo del trap argento</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/kRlxTJSPKK8?si=f-r15YP7kv8eh5Xi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/9hxzmqpnGb0?si=7TYbcAm5RPTxJQ80" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Rgq6962mxb8?si=gaiGuTHSXA0QaTLp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/6RXATyGhPD8?si=WSLXU6Wu5EzjO4jL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/34iwcAaswzg?si=cAhYZ5l9tQYWvDsy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/2A10U99G9yE?si=diCz86qtajgjhuLz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/mQgiQqQQ604?si=-ftTX2tJpLStQHNm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/unFe8pMFadY?si=gQAZDVD7LlP_X6hl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-            <h3>Duki</h3>
+            <h2>Videos más recientes</h2>
+            <div class="slider-videos">
+                <div id="prev-container">
+                    <button id="prev"><img src="../static/botones/anterior-boton.png" alt=""></button>
+                </div>
+                <div class="slide-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Rgq6962mxb8?si=gaiGuTHSXA0QaTLp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="slide-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6RXATyGhPD8?si=WSLXU6Wu5EzjO4jL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="slide-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/X4QmpToshag?si=80bpuHzFteXdNCY5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="slide-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MUvbEdegoCA?si=5N9h6pp0NIulODJs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="slide-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/SBZHsYcTmFc?si=U0oAHPRb16S1EDW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="slide-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-_kpdgCPMDA?si=cD9Xuph-HtoJWXxT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div id="next-container">
+                    <button id="next"><img src="../static/botones/siguiente-boton.png" alt=""></button>
+                </div>
+            </div>
+        </section>
+        <section class="spotify">
+            <div>
+                <h3>Duki</h3>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXe1ikyKZnRtc?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
+            </div>
+            <div>
             <h3>Cazzu</h3>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO3QEivD?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-            <h3>Bizzarrap</h3>´
+            </div>
+            <div>
+                <h3>Bizzarrap</h3>´
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX7auwRw98d8w?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-            <h3>Emilia Mernes</h3>
+            </div>
+            <div>
+                <h3>Emilia Mernes</h3>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/0AqlFI0tz2DsEoJlKSIiT9?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-            <h3>Thiago PZK</h3>
+            </div>
+            <div>
+                <h3>Thiago PZK</h3>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbACd4HEBImc?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-            <h3>Maria Becerra</h3>
+            </div>
+            <div>
+                <h3>Maria Becerra</h3>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbqDp0KLPlRg?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-            <h3>Trueno</h3>
+            </div>
+            <div>
+                <h3>Trueno</h3>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/2x7PC78TmgqpEIjaGAZ0Oz?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-            <h3>Nicki Nicole</h3>
+            </div>
+            <div>
+                <h3>Nicki Nicole</h3>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX649MEn8TxoE?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-            <h3>Paulo Londra</h3>
+            </div>
+            <div>
+                <h3>Paulo Londra</h3>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWYzCZRh8Gdsh?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-            <h3>MuzzoA</h3>
+            </div>
+            <div>
+                <h3>MuzzoA</h3>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/6CGVtK2gsCUFGouHgG50ho?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
+            </div>
         </section>
-        <section id="videos">
-            <h2>Videos de batallas argentinas</h2>
-            <h3>WOS vs TRUENO</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/dJcUTFwnDX4?si=P5lZupGIWAIAnVPW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-            <h2>THIAGO PZK vs ACRU</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/hB51ktGluuQ?si=y-EYK5LeB6_UMzNo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-            <h2>LA JOAQUI vs TAROS</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/c2E5eegWYnc?si=q63FxoECEScqejk4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-            <h2>RØMA vs SARA SOCAS / INVERT vs LA JOAQUI / ERIKA2SANTOS vs KUGAR</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/4WjDua-_MOc?si=PiouGPrjM7kljStg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-            <h2>ROMA vs MECHA</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/JE6VNR-AL-w?si=rFxxamUbBWNaiRyF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <section class="batallas">
+            <div>
+                <h2>Videos de batallas argentinas</h2>
+            </div>
+            <div id="videos">
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dJcUTFwnDX4?si=P5lZupGIWAIAnVPW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+    
+                <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/hB51ktGluuQ?si=y-EYK5LeB6_UMzNo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+    
+                <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/c2E5eegWYnc?si=q63FxoECEScqejk4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+    
+                <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4WjDua-_MOc?si=PiouGPrjM7kljStg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+    
+                <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/JE6VNR-AL-w?si=rFxxamUbBWNaiRyF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+    
+                <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/gx2CXXLHu9s?si=z6xHjVI8vb9z5Gr2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
         </section>
     </main>
     <aside class="asideSection">
         <div class="left-section">
             <h2>Síguenos</h2>
             <div class="social-media-links">
-                <a href="#"><img src="../static/gallery/logosRedes/facebook.png" alt="logo facebook"></a>
-                <a href="#"><img src="../static/gallery/logosRedes/instagram.png" alt="logo instagram"></a>
-                <a href="#"><img src="../static/gallery/logosRedes/whatsapp.png" alt="logo whatsapp"></a>
+                <a href="#"><img src="../static/logosRedes/facebook.png" alt="logo facebook"></a>
+                <a href="#"><img src="../static/logosRedes/instagram.png" alt="logo instagram"></a>
+                <a href="#"><img src="../static/logosRedes/whatsapp.png" alt="logo whatsapp"></a>
             </div>
         </div>
         <h2 class="center-question">Querés recibir las últimas novedades de tus artistas favoritos?</h2>
@@ -118,5 +163,7 @@
             <h3>Síguenos en redes sociales:</h3>
         </div> -->
     </footer>
+    <script src="../js/portada.js"></script>
+    <script src="../js/videos-sliders.js"></script>
 </body>
 </html>

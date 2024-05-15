@@ -343,9 +343,24 @@ footer a {
 /* page MULTIMEDIA HTML2 */
 
 .portada {
-    background-image: url("../static/gallery/banner/banner3.jpg");
     height:70vh;
     position: relative;
+    overflow: hidden;
+}
+
+#video-portada {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra todo el espacio disponible */
+    z-index: 1; /* Coloca el video debajo del contenido del encabezado */
+    transition: filter 0.5s ease-out; /* Suaviza la transición del filtro */
+}
+
+#video-portada.blur {
+    filter: blur(8px); /* Aplica el efecto borroso */
 }
 
 .portada::before {
@@ -356,9 +371,204 @@ footer a {
     bottom: 0;
     left: 0;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* Degradado de transparente a negro */
+    z-index: 2; /* Asegura que el degradado esté por encima del video */
+}
+
+#titulo {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 24px;
+    color: #ffffff;
+    text-shadow: 2px 2px 6px #fffcfc7c;
+    display: none;
+    transform: scale(1); /* Inicia con el tamaño normal */
+    transition: transform 6s;
+}
+#titulo.zoom {
+    transform: scale(1.5); /* Agrandar el título */
 }
 
 
+/* slider de videos */
+#musica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    text-align: center;
+    color:#0d0d0d; 
+}
+
+#prev{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+#next {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+}
+#prev img{
+    
+    width: 20px;
+    height: 20px;
+}
+#next img{
+    width: 20px;
+    height: 20px;
+}
+
+.slider-videos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden; 
+}
+
+.slide-video {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s, opacity 1s;
+    opacity: 0.5;
+    transform: scale(0.8) translateX(-50%);
+    z-index: 1;
+}
+
+.slide-video.current,
+.slide-video.next,
+.slide-video.prev {
+    display: block;
+}
+
+.slide-video.current {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+    z-index: 2;
+}
+
+.slide-video.next {
+    transform: scale(0.8) translateX(-10%);
+}
+
+.slide-video.prev {
+    transform: scale(0.8) translateX(10%);
+}
+
+#prev-container,
+#next-container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#prev-container {
+    left: 0;
+}
+
+#next-container {
+    right: 0;
+}
+
+
+.slide-video iframe {
+    width: 100%;
+    height: auto;
+}
+
+/* seccion de musica de spotify */
+.spotify {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60%, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.spotify div {
+    width: 50%; 
+    align-self: center;
+}
+
+.spotify div:nth-child(even) {
+    justify-self: end;
+}
+
+.spotify div:nth-child(odd) {
+    justify-self: start;
+}
+
+
+@media (max-width: 768px) {
+    .spotify {
+        grid-template-columns: 1fr;
+    }
+    .spotify div {
+        justify-self: center;
+    }
+}
+
+
+/* GRID videos de batallas  */
+.batallas {
+    display: flex;
+    flex-direction: column;
+}
+#videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 20px;
+}
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (max-width: 1024px) {
+    #videos {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    #videos {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+@media (max-width: 320px) {
+    #videos {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+    
+    .video-wrapper iframe {
+        max-width: 70%;
+    }
+}
 /* page LOGIN */
 .header-login{
     background-color: #030637;
