@@ -33,6 +33,7 @@ nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar profundidad */
     z-index: 1000; /* Asegura que el nav esté por encima de otros elementos */
     margin: 0 auto; /* Centrado horizontal */
+    
 }
 
 nav ul {
@@ -319,10 +320,11 @@ footer a {
 
 .progress-bar-mask {
     width: 100%; /* Toma todo el ancho del elemento padre */
-    background-color: #ccc; /* Fondo gris para la máscara */
-    height: 5px; /* Altura visible de la máscara */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo gris para la máscara */
+    height: 8px; /* Altura visible de la máscara */
     position: relative; /* Necesario para el posicionamiento de la barra de progreso */
     overflow: hidden; /* Esconde cualquier parte de la barra que exceda el ancho inicial */
+    border-radius: 4px; /* Agrega bordes redondeados a la máscara */
 }
 
 .progress-bar {
@@ -332,7 +334,8 @@ footer a {
     position:absolute; /* Posicionamiento absoluto respecto a su padre */
     left: 0; /* Alineado al lado izquierdo de la máscara */
     top: 0; /* Alineado al tope de la máscara */
-    transition: width 4s linear; /* Transición suave durante 4 segundos */
+    transition: width 6s linear; /* Transición suave durante 4 segundos */
+    border-radius: 4px; /* Asegura que los bordes de la barra también sean redondeados */
 }
 
 .item-title {

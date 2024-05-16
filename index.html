@@ -21,7 +21,7 @@
             <img src="./static/gallery/SVG/Thiago PZK.svg" alt="Imagen Destacada 3">
         </div>
         <div class="slide" id="slide4">
-            <img src="./static/gallery/SVG/Cazzu Tapa.svg" alt="Imagen Destacada 4">
+            <img src="./static/gallery/SVG/Cazzu.svg" alt="Imagen Destacada 4">
         </div>
         <div class="slide" id="slide5">
             <img src="./static/gallery/SVG/Maria Becerra.svg" alt="Imagen Destacada 5">
@@ -31,22 +31,22 @@
         </div>
         <!-- Navegación con enlaces a secciones de la página -->
         <nav>
-            <div class="menu-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
             <ul>
-                <li><a href="./pages/perfiles.html">Artistas</a></li>
-                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="./index.html">Inicio</a></li>                
+                <li><a href="./pages/perfiles.html">Perfiles</a></li>
                 <li><a href="./pages/multimedia.html">Multimedia</a></li>
+                <li><a href="#eventos">Eventos</a></li>
                 <li><a href="#noticias">Noticias</a></li>
+                <li><a href="./pages/register.html">Registro</a></li>
             </ul>
         </nav>
         <!-- Logo del sitio web -->
-        <div class="logo">
-            <img src="./static/icons/favicon.png" alt="Trap Argentino Logo">
-        </div>
+        <a href="./index.html">
+            <div class="logo">
+                <img src="./static/icons/favicon.png" alt="Trap Argentino Logo">
+            </div>
+        </a>
+        
         <!-- Timeline con miniaturas de artistas -->
         <div class="timeline">
             <div class="timeline-item" data-target="slide1"> <!-- Enlaza con el slide 1 -->
@@ -95,60 +95,49 @@
     </header>
     <main>
         <h1>Trap Argentino</h1>
-        <section id="sobre">
-            <!-- <h2>Sobre Trap Argentino</h2> -->
-            <!-- <p>Breve descripción del género y su impacto en la música y cultura.</p> -->
-        </section>
-
-        <section id="ultimas-noticias">
-            <h2>Últimas Noticias</h2>
-            <div class="news-container">
-                <article>
-                    <h3>Noticia 1</h3>
-                    <p>Descripción breve de la noticia.</p>
-                </article>
-                <article>
-                    <h3>Noticia 2</h3>
-                    <p>Descripción breve de la noticia.</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="eventos-destacados">
-            <h2>Eventos Destacados</h2>
-            <div class="event-container">
-                <div class="event">
-                    <h3>Evento 1</h3>
-                    <p>Detalles del evento.</p>
-                </div>
-                <div class="event">
-                    <h3>Evento 2</h3>
-                    <p>Detalles del evento.</p>
+        <section class="content-section">
+            <div class="image-container">
+                <img src="../TrapArgento/static/gallery/artistas/Bizzarap y duki.jpg" alt="Foto 1">
+                <div class="image-info">
+                    <h3>Título Evento 1</h3>
+                    <p>Fecha del Evento</p>
+                    <p>Descripción breve del evento.</p>
                 </div>
             </div>
-        </section>
-
-        <section id="galeria-fotos">
-            <h2>Galería de Fotos</h2>
-            <div class="photo-gallery">
-                <img src="foto1.jpg" alt="Foto 1">
-                <img src="foto2.jpg" alt="Foto 2">
+            <div class="image-container">
+                <img src="../TrapArgento/static/gallery/artistas/Lit Killa.jpg" alt="Foto 2">
+                <div class="image-info">
+                    <h3>Título Evento 2</h3>
+                    <p>Fecha del Evento</p>
+                    <p>Descripción breve del evento.</p>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="/static/gallery/artistas/Paulo Londra Vivo.jpg" alt="Foto 3">
+                <div class="image-info">
+                    <h3>Título Evento 3</h3>
+                    <p>Fecha del Evento</p>
+                    <p>Descripción breve del evento.</p>
+                </div>
             </div>
         </section>
     </main>
-    <aside class="asideSection">
-        <div class="left-section">
+
+    <aside> <!-- Barra lateral con información adicional -->
+        <div class="social-media-links">
             <h2>Síguenos</h2>
             <div class="social-media-links">
                 <a href="#"><img src="./static/logosRedes/facebook.png" alt="logo facebook"></a>
                 <a href="#"><img src="./static/logosRedes/instagram.png" alt="logo instagram"></a>
                 <a href="#"><img src="./static/logosRedes/whatsapp.png" alt="logo whatsapp"></a>
             </div>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">Facebook</a>
         </div>
-        <h2 class="center-question">Querés recibir las últimas novedades de tus artistas favoritos?</h2>
-        <div class="right-section">
+        <div class="newsletter">
             <h2>Suscríbete</h2>
-            <form class="newsletter">
+            <form>
                 <input type="email" placeholder="Tu correo electrónico">
                 <button type="submit">Suscribir</button>
             </form>
@@ -162,23 +151,11 @@
             <a href="#privacidad">Política de privacidad</a>
             <a href="#terminos">Términos de uso</a>
         </div>
-        <!-- <div class="social-media-footer">
+        <div class="social-media-footer">
             <h3>Síguenos en redes sociales:</h3>
-        </div> -->
+        </div>
     </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let slides = document.querySelectorAll('.slide');
-            let currentSlide = 0;
-            slides[currentSlide].classList.add('active'); // El primer slide activo
-        
-            setInterval(() => {
-                slides[currentSlide].classList.remove('active'); // Remueve la clase 'active'
-                currentSlide = (currentSlide + 1) % slides.length; // Mueve al siguiente slide
-                slides[currentSlide].classList.add('active'); // Añade la clase 'active'
-            }, 4000); // Cambia cada 4 segundos
-        });
-        </script>
-        
+    <!-- script para el slider -->
+    <script src="./js/main.js" defer></script>
 </body>
 </html>
