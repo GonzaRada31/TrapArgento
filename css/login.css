@@ -1,0 +1,302 @@
+/* page LOGIN */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Asegura que padding y border están incluidos en el ancho/altura total */
+    overflow-x: hidden; /* Oculta desbordamiento horizontal */
+}
+
+/* Header y Slider */
+header {
+    position: relative; /* Permite posicionar absolutamente el nav respecto a este contenedor */
+    width: 100%; /* Toma todo el ancho de la ventana */
+    padding: 20px 20px; /* Añade padding para no pegar el contenido a los bordes */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;  /* Asegura que el header esté por encima de otros elementos */
+    display: flex;  /* Asegura que los elementos del header estén en una sola fila */
+    align-items: flex-start; /* Alinea el contenido al inicio del eje cruzado */
+    justify-content: center; /* Centra el contenido a lo largo del eje principal */
+}
+
+/* Navegación */
+nav {
+    position: relative; /* Asegura que el nav esté en la posición correcta */
+    display: inline-flex; /* Asegura que los elementos de la lista estén en una sola fila */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    padding: 10px 20px; /* Ajusta el padding para dar más espacio alrededor del contenido */
+    background-color: rgba(0, 15, 30, 0.45); /* Color de fondo con transparencia */
+    backdrop-filter: blur(20px); /* Desenfoque del fondo detrás del nav */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
+    border-radius: 100px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar profundidad */
+    z-index: 1000; /* Asegura que el nav esté por encima de otros elementos */
+    margin: 0 auto; /* Centrado horizontal */
+    
+}
+
+nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0 auto; /* Auto margins para centrar la lista */
+    display: flex; /* Asegura que los elementos de la lista estén en una sola fila */
+}
+
+nav ul li {
+    margin: 0 20px; /* Aumenta o reduce el espacio entre elementos si es necesario */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 20px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff0000; /* Cambio de color en hover */
+}
+
+/* Logo */
+header .logo {
+    position: absolute; /* Posiciona el logo en relación con el header */
+    top: 10px;
+    left: 100px;
+    transform: translateX(0%);
+    z-index: 10;
+}
+
+header .logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+/* Main */
+main {
+    padding-top: calc(100vh - 50px); /* Espacio para el header */
+    padding: 20px;
+    background: #720455; /* Fondo del contenido principal */
+
+}
+
+.header-login{
+    background-color: #030637;
+}
+
+.main {
+    display: flex;
+    margin: 0;
+    height: 100vh;
+}
+
+/* Estilos para el menú hamburguesa */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 5px;
+    width: 30px;
+}
+
+/* Estilos para los enlaces de navegación */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 10px;
+}
+
+#imagen-lado {
+    background-image: url('../static/gallery/banner/collage.png');
+    background-size: cover;
+    background-position: center;
+    width: 60%;
+    height: 100vh;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100vh;
+    background-color: #3C0753;
+    color: white;
+}
+
+#login-form h1 {
+    margin-bottom: 20px;
+}
+
+#login-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.068);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(255, 84, 224, 0.889);
+    margin-bottom: 20px;
+}
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-container img {
+    margin-right: 10px;
+    height: 20px;
+    width: auto;
+}
+
+#login-form input {
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    width: 100%;
+    color: #030637;
+    background: transparent;
+}
+
+#login-form button {
+    background-color: rgb(255, 72, 194);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#login-form button:hover {
+    background-color: #ff00bf;
+    box-shadow: 0px 5px 10px 0px rgb(255, 74, 195);
+}
+
+#login-form p {
+    color: white;
+    font-size: 14px;
+}
+
+#login-form a {
+    color: #e600ff;
+    font-size: 14px;
+}
+/* Footer */
+footer {
+    background: #030637;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Tamaño por defecto pantallas (1280-1024) */
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    #imagen-lado {
+        width: 60%;
+    }
+    #login-form {
+        width: 40%;
+    }
+}
+
+/* Tamaño tablet horizontal (1024-768) */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    #imagen-lado {
+        width: 60%;
+    }
+    #login-form {
+        width: 40%;
+    }
+}
+
+/* Tamaño tablet (768-480) */
+@media all and (min-width: 480px) and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        background: #333;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path: circle(100px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+
+    .nav-links.open {
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #login-form, #imagen-lado {
+        width: 100%;
+    }
+    .main {
+        flex-direction: column;
+    }
+}
+
+/* Tamaño teléfonos (480-menos ) */
+@media all and (max-width: 480px) {
+    .nav-links {
+        position: absolute;
+        background: #333;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path: circle(100px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+
+    .nav-links.open {
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #login-form, #imagen-lado {
+        width: 100%;
+    }
+    .main {
+        flex-direction: column;
+    }
+    #login-form h1, #login-form p {
+        font-size: 18px;
+    }
+    .input-container img {
+        height: 15px;
+    }
+}
