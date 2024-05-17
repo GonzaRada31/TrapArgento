@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Contenedor principal */
 .container {
-    width: 90%;
+    width: 80%;
     padding: 1rem;
     background-color: #ffffff;
     margin: 2rem;
@@ -220,7 +220,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Imágenes */
 .image-grid img {
     height: auto;
-    max-width: 100%; 
+    max-width: 95%; 
     border-radius: 0.5rem;
     transition: transform 0.3s ease;
 }
@@ -347,4 +347,143 @@ a:hover {
     top: 0;
     left: 0;
     z-index: 0;
+}
+
+
+/* sidebar */
+/* Contenedor principal */
+.container {
+    display: flex;
+    margin: 2rem;
+}
+
+/* Contenido Principal */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 350px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px; /* Ajuste de margen para separarlo del contenido principal */
+}
+
+/* Encabezado del Sidebar */
+.sidebar h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.sidebar-stats {
+    margin-top: 20px;
+}
+
+.sidebar-stats p {
+    margin: 0;
+    color: #555;
+}
+
+.sidebar-stats span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Formulario para seguir artistas */
+#artist-form {
+    margin-bottom: 20px;
+}
+
+#artist-input {
+    width: calc(100% - 110px); /* Ajuste del ancho del input */
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#artist-form button {
+    width: 100px; /* Ancho del botón */
+    padding: 8px;
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#artist-form button:hover {
+    background-color: #2563eb;
+}
+
+/* Lista de artistas seguidos */
+#followed-artists {
+    list-style-type: none;
+    padding: 0;
+}
+
+#followed-artists li {
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #e5e5e5;
+    border-radius: 5px;
+}
+
+#followed-artists li button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 5px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#followed-artists li button:hover {
+    background-color: #cc0000;
+}
+
+
+.follow-controls button {
+    margin-left: 10px; /* Espacio entre el ícono y el botón */
+}
+
+.artist-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    
+    .header {
+        flex-direction: column;
+        align-items: flex-start; 
+    }
+
+    .song-list .flex {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .song-list .flex-1 {
+        margin-right: 0; 
+    }
+
+    #artist-input {
+        width: 100%; 
+    }
+
+    .sidebar {
+        width: 250px;
+        padding: 20px;
+        background-color: #b5f0fc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(5, 103, 112, 0.1);
+        margin-left: 20px; /* Ajuste de margen para separarlo del contenido principal */
+    }
 }

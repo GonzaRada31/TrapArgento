@@ -7,6 +7,10 @@
   <link rel="icon" type="image/ico" href="../static/icons/TrapArgento.png">
   <link rel="stylesheet" href="../css/perfil.css">
   <script src="../js/main.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-yf72cQ7eRPiTKLz7r33cl7U3GV8O3HhpIB4C7qtlUuZ+Xz+aiST7VWE17xwwltFj" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
 </head>
 <body>
     <div class="container-perfil">        
@@ -33,77 +37,109 @@
 
     <main>
         <div class="container">
-            <div class="header">
-                <h5>Canciones Populares</h5>
-                <a href="#" id="view-all-btn">
-                    Mostrar mas!!
-                </a>
-        </div>
-        <div class="song-list">
-                <ul>
-                    <li>
-                        <div class="flex">                    
-                            <div class="flex-1">
-                                <p class="letra-list">
-                                    Adán y Eva
-                                </p>
-                                <p class="letra-list">
-                                    Álbum: "Homerun"
-                                </p>
+            <div class="main-content">
+                <div class="header">
+                    <h5>Canciones Populares</h5>
+                    <a href="#" id="view-all-btn">
+                        Mostrar mas!!
+                    </a>
+                </div>
+                <div class="song-list">
+                    <ul>
+                        <li>
+                            <div class="flex">                    
+                                <div class="flex-1">
+                                    <p class="letra-list">
+                                        Adán y Eva
+                                    </p>
+                                    <p class="letra-list">
+                                        Álbum: "Homerun"
+                                    </p>
+                                </div>
+                                <div class="time-letra">
+                                    3:33 minutos
+                                </div>
                             </div>
-                            <div class="time-letra">
-                                3:33 minutos
+                        </li>
+                        <li>
+                            <div class="flex">                    
+                                <div class="flex-1">
+                                    <p class="letra-list">
+                                        Chica Paranormal
+                                    </p>
+                                    <p class="letra-list">
+                                        Álbum: "Homerun"
+                                    </p>
+                                </div>
+                                <div class="time-letra">
+                                    3:35 minutos
+                                </div>
                             </div>
-                        </div>
+                        </li>
+                        <!-- Las otras canciones van aquí -->
+                        <li>
+                            <div class="flex">                    
+                                <div class="flex-1">
+                                    <p class="letra-list">
+                                        Chica Paranormal
+                                    </p>
+                                    <p class="letra-list">
+                                        Álbum: "Homerun"
+                                    </p>
+                                </div>
+                                <div class="time-letra">
+                                    3:35 minutos
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex">                    
+                                <div class="flex-1">
+                                    <p class="letra-list">
+                                        Chica Paranormal
+                                    </p>
+                                    <p class="letra-list">
+                                        Álbum: "Homerun"
+                                    </p>
+                                </div>
+                                <div class="time-letra">
+                                    3:35 minutos
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar">
+                <h2>Artistas que Sigo</h2>
+                <ul id="followed-artists">
+                    <!-- Aquí se mostrarán los artistas seguidos -->                   
+
+                    <li class="artist-item">
+                        Drake                        
+                        <button onclick="removeArtist(this)">Unfollow</button>
                     </li>
-                    <li>
-                        <div class="flex">                    
-                            <div class="flex-1">
-                                <p class="letra-list">
-                                    Chica Paranormal
-                                </p>
-                                <p class="letra-list">
-                                    Álbum: "Homerun"
-                                </p>
-                            </div>
-                            <div class="time-letra">
-                                3:35 minutos
-                            </div>
-                        </div>
-                    </li>
-                    <!-- Las otras canciones van aquí -->
-                    <li>
-                        <div class="flex">                    
-                            <div class="flex-1">
-                                <p class="letra-list">
-                                    Chica Paranormal
-                                </p>
-                                <p class="letra-list">
-                                    Álbum: "Homerun"
-                                </p>
-                            </div>
-                            <div class="time-letra">
-                                3:35 minutos
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex">                    
-                            <div class="flex-1">
-                                <p class="letra-list">
-                                    Chica Paranormal
-                                </p>
-                                <p class="letra-list">
-                                    Álbum: "Homerun"
-                                </p>
-                            </div>
-                            <div class="time-letra">
-                                3:35 minutos
-                            </div>
-                        </div>
+                    <li class="artist-item">
+                        Bad Bunny
+                        <button onclick="removeArtist(this)">Unfollow</button>
                     </li>
                 </ul>
-        </div>
+
+                <div class="sidebar-stats">
+                    <h2>Estadísticas</h2>
+                    <p>Seguidores <span class="material-symbols-outlined">diversity_3</span> : <span id="seguidores-count"></span></p>
+                    <p>Me gusta <span class="material-symbols-outlined" style="color: red;">favorite</span> :  <span id="meGusta-count"></span></p>
+                    
+                </div>
+
+             
+
+                <form id="artist-form">
+                    <label for="artist-input">Seguir Nuevo Artista:</label>
+                    <input type="text" id="artist-input" placeholder="Nombre del Artista">
+                    <button type="button" onclick="followArtist()">Seguir</button>
+                </form>
+            </div>
         </div>
         
         
@@ -150,5 +186,7 @@
             </div>
         </div>
     </footer>
+
+    
 </body>
 </html>
