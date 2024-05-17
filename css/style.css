@@ -158,88 +158,6 @@ main {
     transform: scale(1.1); /* Zoom cuando está activo */
 }
 
-.asideSection{
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f9f9f9;
-    padding: 10px;
-}
-
-.left-section{
-    flex: 0.5; /* Ocupa un poco menos de un  tercio del espacio disponible */
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
-    text-align: center; 
-}
-
-.right-section {
-    flex: 1;
-    
-}
-.right-section h2{
-    font-size: 18px;
-    text-align: center;
-}
-.center-question {
-    flex: 1; /* Ocupa un tercio del espacio disponible */
-    text-align: center;
-    font-size: 18px;
-}
-
-.social-media-links {
-    display: flex;
-    gap: 10px;
-}
-
-.social-media-links img {
-    width: 24px;
-    height: 24px;
-}
-
-.newsletter {
-    display: flex;
-    flex-direction: column; /* Alinea los elementos verticalmente */
-    align-items: center; /* Alinea horizontalmente al centro */
-}
-
-input[type="email"] {
-    width: 80%; /* Ocupa todo el ancho disponible */
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
-button[type="submit"] {
-    background-color: #3a0073;
-    color: #fff;
-    border: none;
-    padding: 8px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-/* Footer */
-footer {
-    background: #030637;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
 /* Media Queries para diferentes dispositivos */
 @media (max-width: 1024px) {
     header .logo img {
@@ -340,4 +258,93 @@ footer a {
 
 .item-title {
     padding-top: 5px;
+}
+
+
+/* Estilos del aside */
+.asideSection {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+.left-section {
+    flex: 0.5; /* Ocupa un poco menos de un tercio del espacio disponible */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+}
+
+.right-section {
+    flex: 1;
+}
+
+.right-section h2 {
+    font-size: 18px;
+    text-align: center;
+}
+
+.center-question {
+    flex: 1; /* Ocupa un tercio del espacio disponible */
+    text-align: center;
+    font-size: 18px;
+}
+
+.social-media-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-media-links img {
+    width: 24px;
+    height: 24px;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+input[type="email"] {
+    width: 80%; 
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: #3a0073;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos del footer */
+footer {
+    background: #030637;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer p {
+    font-size: 16px;
 }
