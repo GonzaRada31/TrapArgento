@@ -1,11 +1,9 @@
 /* page LOGIN */
-body, html {
-    height: 100%;
+*{
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    box-sizing: border-box; /* Asegura que padding y border están incluidos en el ancho/altura total */
-    overflow-x: hidden; /* Oculta desbordamiento horizontal */
+    box-sizing: border-box; 
 }
 
 /* Header y Slider */
@@ -68,7 +66,7 @@ header .logo {
 }
 
 header .logo img {
-    width: 150px;
+    width: 120px;
     height: auto;
     display: block;
 }
@@ -91,19 +89,6 @@ main {
     height: 100vh;
 }
 
-/* Estilos para el menú hamburguesa */
-.menu-icon {
-    display: none;
-    cursor: pointer;
-}
-
-.menu-icon span {
-    display: block;
-    height: 2px;
-    background: #fff;
-    margin-bottom: 5px;
-    width: 30px;
-}
 
 /* Estilos para los enlaces de navegación */
 .nav-links {
@@ -233,6 +218,22 @@ footer a {
 
 /* Tamaño tablet (768-480) */
 @media all and (min-width: 480px) and (max-width: 768px) {
+    nav, nav ul {
+        display: none; /* Oculta la navegación en dispositivos móviles */
+    }
+    #nav_check:checked ~ nav,
+    #nav_check:checked ~ nav ul {
+        display: flex; /* Esto mostrará la navegación cuando el checkbox esté marcado */
+    }
+    header .logo {
+        left: 15%; /* Mueve el logo al 50% de la anchura del contenedor */
+        transform: translateX(-50%); /* Centra el logo exactamente en el medio */
+        top: 10px; /* Mantiene la altura vertical */
+    }
+
+    header .logo img {
+        width: 80px; /* Ajusta el tamaño del logo para dispositivos móviles */
+    }
     .nav-links {
         position: absolute;
         background: #333;
@@ -249,10 +250,6 @@ footer a {
         clip-path: circle(1000px at 90% -10%);
         -webkit-clip-path: circle(1000px at 90% -10%);
         pointer-events: all;
-    }
-
-    .menu-icon {
-        display: block;
     }
 
     #login-form, #imagen-lado {
@@ -265,6 +262,22 @@ footer a {
 
 /* Tamaño teléfonos (480-menos ) */
 @media all and (max-width: 480px) {
+    nav, nav ul {
+        display: none; /* Oculta la navegación en dispositivos móviles */
+    }
+    #nav_check:checked ~ nav,
+    #nav_check:checked ~ nav ul {
+        display: flex; /* Esto mostrará la navegación cuando el checkbox esté marcado */
+    }
+    header .logo {
+        left: 15%; /* Mueve el logo al 50% de la anchura del contenedor */
+        transform: translateX(-50%); /* Centra el logo exactamente en el medio */
+        top: 10px; /* Mantiene la altura vertical */
+    }
+
+    header .logo img {
+        width: 80px; /* Ajusta el tamaño del logo para dispositivos móviles */
+    }
     .nav-links {
         position: absolute;
         background: #333;
@@ -283,7 +296,7 @@ footer a {
         pointer-events: all;
     }
 
-    .menu-icon {
+    .-icon {
         display: block;
     }
 

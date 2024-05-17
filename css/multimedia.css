@@ -12,7 +12,6 @@ body, html {
 header {
     position: relative; /* Permite posicionar absolutamente el nav respecto a este contenedor */
     width: 100%; /* Toma todo el ancho de la ventana */
-    padding: 20px 20px; /* Añade padding para no pegar el contenido a los bordes */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     z-index: 1000;  /* Asegura que el header esté por encima de otros elementos */
     display: flex;  /* Asegura que los elementos del header estén en una sola fila */
@@ -56,6 +55,17 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #ff0000; /* Cambio de color en hover */
+}
+/* icono login */
+.login-form {
+    position: absolute;
+    top: 20px; 
+    right: 60px;
+    z-index: 1000;
+}
+.login-form img {
+    width: 40px; 
+    height: auto;
 }
 
 /* Logo */
@@ -117,10 +127,8 @@ main {
     position: absolute;
     z-index: 2;
     bottom: 0;
-    left: 0;
-    right: 0;
     text-align: center;
-    font-size: 24px;
+    font-size: 16px;
     color: #ffffff;
     text-shadow: 2px 2px 6px #fffcfc7c;
     display: none;
@@ -252,20 +260,14 @@ h2 {
 }
 
 
-@media (max-width: 768px) {
-    .spotify {
-        grid-template-columns: 1fr;
-    }
-    .spotify div {
-        justify-self: center;
-    }
-}
-
-
 /* GRID videos de batallas  */
 .batallas {
     display: flex;
     flex-direction: column;
+}
+.batallas div h2{
+    color: white;
+    text-align: center;
 }
 #videos {
     display: grid;
@@ -377,16 +379,99 @@ footer a {
 }
 
 @media (max-width: 768px) {
+    header .logo {
+        left: 40px;
+    }
+    header .logo img {
+        width: 80px;
+        height: auto;
+        display: block;
+    }
+    .login-form img {
+        width: 30px; 
+        height: auto;
+    }
+    #titulo {
+        font-size: 14px;
+    }
+    #musica h2 {
+        font-size: 24px;
+        text-align: center;
+        color:#ffffff; 
+    }
+    .spotify {
+        grid-template-columns: 1fr;
+    }
+    .spotify div {
+        justify-self: center;
+        width: 90%; 
+    }
     #videos {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
+    .asideSection {
+        width: auto;
+        flex-direction: column;
+    }
+    .asideSection h2{
+        font-size: 16px;
+    }
+    footer p {
+        font-size: 16px;
+    }
+    footer a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 425px){
+    #titulo {
+        font-size: 7px;
+    }
+    .batallas h2 {
+        font-size:18px;
+    }
+    .asideSection h2{
+        font-size: 14px;
+    }
+    footer p {
+        font-size: 12px;
+    }
+    footer a {
+        font-size: 12px;
+    }
 }
 @media (max-width: 320px) {
+    header .logo {
+        left: 20px;
+    }
+    header .logo img {
+        width: 60px;
+        height: auto;
+        display: block;
+    }
+    .login-form img {
+        width: 20px; 
+        height: auto;
+    }
+    #titulo {
+        max-width: 320px;
+        font-size: 6px;
+    }
+    #musica h2 {
+        font-size: 16px;
+    }
     #videos {
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     }
     
     .video-wrapper iframe {
         max-width: 70%;
+    }
+    footer p {
+        font-size: 10px;
+    }
+    footer a {
+        font-size: 10px;
     }
 }

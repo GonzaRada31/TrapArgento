@@ -10,19 +10,32 @@
 <body>
     <!-- Encabezado con slider de imágenes y navegación -->
     <header class="portada">
-        <!-- Navegación con enlaces a secciones de la página -->
         <nav>
             <ul>
-                <li><a href="#artistas">Artistas</a></li>
+                <li><a href="./perfiles.html">Artistas</a></li>
                 <li><a href="#eventos">Eventos</a></li>
                 <li><a href="#noticias">Noticias</a></li>
             </ul>
         </nav>
+        <input type="checkbox" id="nav_check">
+        <label for="nav_check" class="hamburguer">
+        <!-- Icono del menú -->
+            <div class="menu"></div>  
+            <div class="menu"></div>
+            <div class="menu"></div>
+        </label>
         <video id="video-portada" playsinline muted>
             <source src="../static/portada/duki2.mp4" type="video/mp4">
             Tu navegador no soporta videos HTML5.
         </video>
-        <h1 id="titulo" style="display: none">Escuchá lo mejor del Trap Argentino</h1>
+        <div class="login-form">
+            <a href="./login.html">
+                <img src="../static/login/user.png" alt="">
+            </a>
+        </div>
+        <div id="titulo" style="display: none">
+            <h1>Escuchá lo mejor del Trap Argentino</h1>
+        </div>
         <!-- Logo del sitio web -->
         <div class="logo">
             <a href="../index.html">
@@ -62,43 +75,33 @@
         </section>
         <section class="spotify">
             <div>
-                <h3>Duki</h3>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXe1ikyKZnRtc?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
             <div>
-            <h3>Cazzu</h3>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO3QEivD?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
             <div>
-                <h3>Bizzarrap</h3>´
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX7auwRw98d8w?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
             <div>
-                <h3>Emilia Mernes</h3>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/0AqlFI0tz2DsEoJlKSIiT9?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
             <div>
-                <h3>Thiago PZK</h3>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbACd4HEBImc?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
             <div>
-                <h3>Maria Becerra</h3>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbqDp0KLPlRg?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
             <div>
-                <h3>Trueno</h3>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/2x7PC78TmgqpEIjaGAZ0Oz?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
             <div>
-                <h3>Nicki Nicole</h3>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX649MEn8TxoE?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
             <div>
-                <h3>Paulo Londra</h3>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWYzCZRh8Gdsh?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
             <div>
-                <h3>MuzzoA</h3>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/6CGVtK2gsCUFGouHgG50ho?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
         </section>
@@ -159,9 +162,6 @@
             <a href="#privacidad">Política de privacidad</a>
             <a href="#terminos">Términos de uso</a>
         </div>
-        <!-- <div class="social-media-footer">
-            <h3>Síguenos en redes sociales:</h3>
-        </div> -->
     </footer>
     <script src="../js/portada.js"></script>
     <script src="../js/videos-sliders.js"></script>
