@@ -20,6 +20,20 @@ header {
     justify-content: center; /* Centra el contenido a lo largo del eje principal */
 }
 
+/* login */
+.login-form {
+    position: absolute;
+    top: 20px; 
+    right: 60px;
+    z-index: 1004;
+}
+
+.login-form img {
+    width: 40px; 
+    height: auto;
+}
+
+
 /* Navegación */
 nav {
     position: relative; /* Asegura que el nav esté en la posición correcta */
