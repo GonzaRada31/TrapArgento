@@ -8,7 +8,8 @@
     <script src="../js/main.js"></script>
     <link rel="shortcut icon" href="../static/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 <body>
     
@@ -52,24 +53,25 @@
                 <form class="custom-form-inner" action="#">
                     <div class="custom-input-group">
                         <label for="last-name" class="custom-label">Nombres y Apellido</label>
-                        <input type="text" name="last-name" id="last-name" class="custom-input" placeholder="Jhon, Doe" required="">
+                        <input type="text" name="last-name" id="last-name" class="custom-input" placeholder="Jhon, Doe">
                     </div>
                     <div class="custom-input-group">
                         <label for="email" class="custom-label">Email</label>
-                        <input type="email" name="email" id="email" class="custom-input" placeholder="name@yahoo.com" required="">
+                        <input type="email" name="email" id="email" class="custom-input" placeholder="name@yahoo.com">
                     </div>
                     <div class="custom-input-group">
                         <label for="password" class="custom-label">Contraseña</label>
-                        <input type="password" name="password" id="password" placeholder="••••••••" class="custom-input" required="">
+                        <input type="password" name="password" id="password" placeholder="••••••••" class="custom-input">
                     </div>
                     <div class="custom-input-group">
                         <label for="confirm-password" class="custom-label">Confirmar Contraseña</label>
-                        <input type="password" name="confirm-password" id="confirm-password" placeholder="••••••••" class="custom-input" required="">
+                        <input type="password" name="confirm-password" id="confirm-password" placeholder="••••••••" class="custom-input" >
                     </div>                   
                     <button type="submit" class="custom-button">Crear Cuenta</button>
                 </form>                
             </div>            
         </div>
     </section>
+    <script src="../js/form-validation.js"></script>
 </body>
 </html>
