@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Registro con HTML5 y CSS3</title>
+    <link href="../css/registro.css" rel="stylesheet">
+    <script src="../js/main.js"></script>
+    <link rel="shortcut icon" href="../static/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    
+
+    <section class="custom-section">
+        <div class="custom-container">
+            <a href="/" class="logo">
+                <img src="../static/icons/favicon.png" alt="Trap Argentino Logo">
+            </a>
+            <h5>Registrarse con:</h5>
+            <ul id="login-options" class="custom-list">
+                <li>
+                    <a href="#" class="custom-link facebook">
+                        <i class="fab fa-facebook"></i>
+                        <span class="custom-label">Facebook</span>
+                        <span class="custom-tag">Popular</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="custom-link google">
+                        <i class="fab fa-google"></i>
+                        <span class="custom-label">Google</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="custom-link twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span class="custom-label">Twitter</span>
+                    </a>
+                </li>
+            </ul>
+            <div>
+                <a href="#" id="show-form-link" class="custom-info-link">
+                    Crear cuenta con Email.
+                </a>
+            </div>
+            <div id="custom-form-container" class="custom-form-container">
+                <h1 class="custom-title">
+                    Crear una Cuenta
+                </h1>
+                <form class="custom-form-inner" action="#">
+                    <div class="custom-input-group">
+                        <label for="last-name" class="custom-label">Nombres y Apellido</label>
+                        <input type="text" name="last-name" id="last-name" class="custom-input" placeholder="Jhon, Doe" required="">
+                    </div>
+                    <div class="custom-input-group">
+                        <label for="email" class="custom-label">Email</label>
+                        <input type="email" name="email" id="email" class="custom-input" placeholder="name@yahoo.com" required="">
+                    </div>
+                    <div class="custom-input-group">
+                        <label for="password" class="custom-label">Contraseña</label>
+                        <input type="password" name="password" id="password" placeholder="••••••••" class="custom-input" required="">
+                    </div>
+                    <div class="custom-input-group">
+                        <label for="confirm-password" class="custom-label">Confirmar Contraseña</label>
+                        <input type="password" name="confirm-password" id="confirm-password" placeholder="••••••••" class="custom-input" required="">
+                    </div>                   
+                    <button type="submit" class="custom-button">Crear Cuenta</button>
+                </form>                
+            </div>            
+        </div>
+    </section>
+</body>
+</html>

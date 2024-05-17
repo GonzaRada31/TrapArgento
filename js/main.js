@@ -83,3 +83,96 @@ document.addEventListener("DOMContentLoaded", function() {
     // Mostrar más canciones cuando se hace clic en "View All"
     viewAllBtn.addEventListener("click", showMoreSongs);
   });
+
+  function removeArtist(button) {
+    var listItem = button.parentNode; // Obtiene el elemento <li> padre del botón
+    var followedArtists = document.getElementById('followed-artists');
+    followedArtists.removeChild(listItem); // Elimina el elemento <li> de la lista
+}
+
+
+function removeArtist(button) {
+  var li = button.parentNode;
+  li.parentNode.removeChild(li);
+}
+
+function followArtist() {
+  var input = document.getElementById('artist-input');
+  var artistName = input.value.trim();
+
+  if (artistName !== '') {
+      var followedArtists = document.getElementById('followed-artists');
+      var newArtistItem = document.createElement('li');
+      newArtistItem.className = 'artist-item';
+      newArtistItem.textContent = artistName;
+      var unfollowButton = document.createElement('button');
+      unfollowButton.textContent = 'Unfollow';
+      unfollowButton.onclick = function () {
+          removeArtist(this);
+      };
+      newArtistItem.appendChild(unfollowButton);
+      followedArtists.appendChild(newArtistItem);
+
+      input.value = ''; // Limpiar el campo de entrada después de agregar el artista
+  } else {
+      alert('Por favor ingresa un nombre de artista válido.');
+  }
+}
+
+
+
+
+/* seguidores */
+// Define variables para almacenar la cantidad de seguidores y me gusta
+let seguidores = 1000;
+let meGusta = 5000;
+
+// Función para actualizar el número de seguidores en la página
+function actualizarSeguidores() {
+    document.getElementById('seguidores-count').innerText = seguidores;
+}
+
+// Función para actualizar el número de me gusta en la página
+function actualizarMeGusta() {
+    document.getElementById('meGusta-count').innerText = meGusta;
+}
+
+// Llama a las funciones de actualización al cargar la página
+window.onload = function() {
+    actualizarSeguidores();
+    actualizarMeGusta();
+};
+
+/* registro */
+
+document.addEventListener('DOMContentLoaded', function () {
+  const loginOptions = document.getElementById('login-options');
+  const formContainer = document.getElementById('custom-form-container'); // Aquí se corrige la selección
+  const showFormLink = document.getElementById('show-form-link');
+
+  // Ocultar el formulario al cargar la página
+  formContainer.style.display = 'none';
+
+  // Mostrar el formulario al hacer clic en el enlace
+  showFormLink.addEventListener('click', function (event) {
+      event.preventDefault();
+      if (formContainer.style.display === 'none') {
+          formContainer.style.display = 'block';
+          loginOptions.style.display = 'none'; // Ocultar los enlaces de inicio de sesión
+      } else {
+          formContainer.style.display = 'none';
+          loginOptions.style.display = 'block'; // Mostrar los enlaces de inicio de sesión
+      }
+  });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const customInfoLink = document.querySelector('.custom-info-link');
+  const customFormContainer = document.getElementById('custom-form-container'); // Corrección aquí
+
+  customInfoLink.addEventListener('click', function() {
+      customFormContainer.classList.toggle('active'); // Agrega o quita la clase 'active' al contenedor del formulario
+  });
+});
