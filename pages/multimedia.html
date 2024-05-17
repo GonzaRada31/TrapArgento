@@ -10,13 +10,6 @@
 <body>
     <!-- Encabezado con slider de imágenes y navegación -->
     <header class="portada">
-        <nav>
-            <ul>
-                <li><a href="./perfiles.html">Artistas</a></li>
-                <li><a href="#eventos">Eventos</a></li>
-                <li><a href="#noticias">Noticias</a></li>
-            </ul>
-        </nav>
         <input type="checkbox" id="nav_check">
         <label for="nav_check" class="hamburguer">
         <!-- Icono del menú -->
@@ -24,6 +17,17 @@
             <div class="menu"></div>
             <div class="menu"></div>
         </label>
+        <nav>
+            <ul>
+                <!-- este logo aparece en la solapa del nav en el menu hamburguesa unicamente -->
+                <div class="nav-logo">
+                    <img src="../static/icons/favicon.png" alt="Trap Argentino Logo">
+                </div>
+                <li><a href="./perfiles.html">Artistas</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#noticias">Noticias</a></li>
+            </ul>
+        </nav>
         <video id="video-portada" playsinline muted>
             <source src="../static/portada/duki2.mp4" type="video/mp4">
             Tu navegador no soporta videos HTML5.

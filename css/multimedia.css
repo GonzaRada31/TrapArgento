@@ -4,45 +4,45 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    box-sizing: border-box; /* Asegura que padding y border están incluidos en el ancho/altura total */
-    overflow-x: hidden; /* Oculta desbordamiento horizontal */
+    box-sizing: border-box; 
+    overflow-x: hidden; 
 }
 
 /* Header y Slider */
 header {
-    position: relative; /* Permite posicionar absolutamente el nav respecto a este contenedor */
-    width: 100%; /* Toma todo el ancho de la ventana */
+    position: relative; 
+    width: 100%; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    z-index: 1000;  /* Asegura que el header esté por encima de otros elementos */
-    display: flex;  /* Asegura que los elementos del header estén en una sola fila */
-    align-items: flex-start; /* Alinea el contenido al inicio del eje cruzado */
-    justify-content: center; /* Centra el contenido a lo largo del eje principal */
+    z-index: 1000;  
+    display: flex;  
+    align-items: flex-start; 
+    justify-content: center; 
 }
 
 /* Navegación */
 nav {
-    position: relative; /* Asegura que el nav esté en la posición correcta */
-    display: inline-flex; /* Asegura que los elementos de la lista estén en una sola fila */
-    justify-content: center; /* Centra los elementos horizontalmente */
-    padding: 10px 20px; /* Ajusta el padding para dar más espacio alrededor del contenido */
-    background-color: rgba(0, 15, 30, 0.45); /* Color de fondo con transparencia */
-    backdrop-filter: blur(20px); /* Desenfoque del fondo detrás del nav */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
-    border-radius: 100px; /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar profundidad */
-    z-index: 1000; /* Asegura que el nav esté por encima de otros elementos */
-    margin: 0 auto; /* Centrado horizontal */
+    position: relative; 
+    display: inline-flex; 
+    justify-content: center; 
+    padding: 10px 20px; 
+    background-color: rgba(0, 15, 30, 0.45); 
+    backdrop-filter: blur(20px); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border-radius: 100px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+    margin: 0 auto; 
     
 }
 
 nav ul {
-    list-style: none; /* Elimina los puntos de la lista */
-    margin: 0 auto; /* Auto margins para centrar la lista */
-    display: flex; /* Asegura que los elementos de la lista estén en una sola fila */
+    list-style: none; 
+    margin: 0 auto; 
+    display: flex; 
 }
 
 nav ul li {
-    margin: 0 20px; /* Aumenta o reduce el espacio entre elementos si es necesario */
+    margin: 0 20px; 
 }
 
 nav ul li a {
@@ -54,8 +54,19 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff0000; /* Cambio de color en hover */
+    color: #ff0000; 
 }
+/* este logo es el que esta oculto en la medida 1024 pero luego aparece en el nav del menu hamburguesa */
+.nav-logo {
+    display: none; /* Oculto por defecto */
+    padding: 10px; 
+    text-align: center; 
+}
+.nav-logo img {
+    width: 90px;
+    height: 90px; 
+}
+
 /* icono login */
 .login-form {
     position: absolute;
@@ -70,7 +81,7 @@ nav ul li a:hover {
 
 /* Logo */
 header .logo {
-    position: absolute; /* Posiciona el logo en relación con el header */
+    position: absolute; 
     top: 10px;
     left: 100px;
     transform: translateX(0%);
@@ -85,9 +96,9 @@ header .logo img {
 
 /* Main */
 main {
-    padding-top: calc(100vh - 50px); /* Espacio para el header */
+    padding-top: calc(100vh - 50px); 
     padding: 20px;
-    background: #720455; /* Fondo del contenido principal */
+    background: #720455; 
 
 }
 
@@ -103,13 +114,13 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que el video cubra todo el espacio disponible */
-    z-index: 1; /* Coloca el video debajo del contenido del encabezado */
-    transition: filter 0.5s ease-out; /* Suaviza la transición del filtro */
+    object-fit: cover; 
+    z-index: 1; 
+    transition: filter 0.5s ease-out; 
 }
 
 #video-portada.blur {
-    filter: blur(8px); /* Aplica el efecto borroso */
+    filter: blur(8px); 
 }
 
 .portada::before {
@@ -235,7 +246,7 @@ h2 {
 
 .slide-video iframe {
     width: 100%;
-    height: auto;
+    height: 500px;
 }
 
 /* seccion de musica de spotify */
@@ -335,12 +346,12 @@ h2 {
 
 .newsletter {
     display: flex;
-    flex-direction: column; /* Alinea los elementos verticalmente */
-    align-items: center; /* Alinea horizontalmente al centro */
+    flex-direction: column; 
+    align-items: center; 
 }
 
 input[type="email"] {
-    width: 80%; /* Ocupa todo el ancho disponible */
+    width: 80%; 
     padding: 5px;
     margin-bottom: 10px;
 }
@@ -387,6 +398,9 @@ footer a {
         height: auto;
         display: block;
     }
+    .login-form {
+        right: 90px;
+    }
     .login-form img {
         width: 30px; 
         height: auto;
@@ -394,6 +408,62 @@ footer a {
     #titulo {
         font-size: 14px;
     }
+    
+    /* menu hamburguesa */
+    /* ubicacion y tamaño del checkbox*/
+    #nav_check {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        opacity: 0; /* El checkbox es invisible pero funcional */
+        width: 40px;
+        height: 40px;
+        z-index: 1000;
+    }
+    /* ubicacion del icono menu hamburguesa */
+    .hamburguer {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        z-index: 1002; 
+        cursor: pointer;
+    }
+    /* Estilos para el icono del menú , las 3 rayitas*/
+    .menu {
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    .nav-logo {
+        display: block; /* Muestra el logo */
+    }
+    nav {
+        position: absolute;
+        top: 5px;
+        left: -120%; /* Empieza oculto fuera de la pantalla */
+        width: 280px;
+        height: 100vh;
+        background-color: rgb(0, 15, 30);
+        border-radius: 0;
+        transition: left 0.3s; /* Anima la propiedad left */
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    nav ul li{
+        padding-top: 25px;
+    }
+    /* Mostrar el menú cuando #nav_check está marcado */
+    #nav_check:checked ~ nav {
+        left: 0;
+        display: flex;
+    }
+
     #musica h2 {
         font-size: 24px;
         text-align: center;
@@ -425,8 +495,21 @@ footer a {
 }
 
 @media (max-width: 425px){
+    nav{
+        width: 150px;
+    }
+    nav ul li{
+        font-size: 12px;
+    }
+    .menu{
+        width: 20px;
+    }
     #titulo {
         font-size: 7px;
+    }
+    .slide-video iframe {
+        width: 100%;
+        height: 300px;
     }
     .batallas h2 {
         font-size:18px;
