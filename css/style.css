@@ -122,63 +122,6 @@ main {
     flex-direction: column; /* Organiza los contenidos en columna */
 }
 
-/* Estilos para la sección de noticias */
-.news {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px 0;
-}
-
-.news-item {
-    width: 23%; /* Ajusta esto según el número de items que quieras por fila */
-    margin: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #fff; /* Fondo para mejorar la legibilidad */
-}
-
-.news-item a {
-    display: block;
-    overflow: hidden; /* Esconde cualquier parte de la imagen que se salga de los límites */
-}
-
-.news-item img {
-    width: 100%;
-    height: 200px; /* Altura fija para todas las imágenes */
-    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
-    transition: transform 0.3s ease; /* Transición suave para el efecto de escala */
-}
-
-.news-item a:hover img {
-    transform: scale(1.05); /* Aumenta el tamaño de la imagen al pasar el mouse */
-}
-
-
-.news-item p {
-    padding: 10px;
-    text-align: center;
-    flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
-    background: #f8f8f8; /* Fondo ligeramente diferente para el texto */
-}
-
-.expanded-image {
-    position: fixed; /* O absolute, según prefieras */
-    z-index: 1001;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%; /* O el tamaño que desees */
-    height: auto;
-    border: 3px solid white; /* O cualquier otro estilo que prefieras */
-}
-
-
-
-
 /* Estilos para el banner-flyer */
 .banner-flyer {
     width: 100%; /* Ocupa todo el ancho de la pantalla */
