@@ -34,6 +34,34 @@ header {
 }
 
 
+/* Estilos para el menú navegación en móviles */
+.mobile-nav {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: rgba(0, 15, 30, 0.9);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+
 /* Navegación */
 nav {
     position: relative; /* Asegura que el nav esté en la posición correcta */
@@ -87,55 +115,97 @@ header .logo img {
     display: block;
 }
 
-/* Main */
+/* Estilos para el main y sus secciones */
 main {
-    padding-top: calc(100vh - 50px); /* Espacio para el header */
-    padding: 20px;
-    background: #720455; /* Fondo del contenido principal */
-
-}
-
-.image-container {
-    position: relative;
-    width: 100%;
-    height: auto;
-}
-
-.image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.image-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-.image-info h3, .image-info p {
-    margin: 5px 0;
-}
-
-/* Secciones */
-.news-container, .event-container, .photo-gallery {
+    width: 100%; /* Asegura que main ocupe todo el ancho de la pantalla */
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column; /* Organiza los contenidos en columna */
 }
 
-.news-container article, .event-container .event, .photo-gallery img {
-    flex-basis: 49%;
-    margin-bottom: 20px;
-    background: #910A67;
-    padding: 10px;
-    border-radius: 5px;
+/* Estilos para la sección de noticias */
+.news {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 0;
 }
+
+.news-item {
+    width: 23%; /* Ajusta esto según el número de items que quieras por fila */
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff; /* Fondo para mejorar la legibilidad */
+}
+
+.news-item a {
+    display: block;
+    overflow: hidden; /* Esconde cualquier parte de la imagen que se salga de los límites */
+}
+
+.news-item img {
+    width: 100%;
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    transition: transform 0.3s ease; /* Transición suave para el efecto de escala */
+}
+
+.news-item a:hover img {
+    transform: scale(1.05); /* Aumenta el tamaño de la imagen al pasar el mouse */
+}
+
+
+.news-item p {
+    padding: 10px;
+    text-align: center;
+    flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
+    background: #f8f8f8; /* Fondo ligeramente diferente para el texto */
+}
+
+/* Estilos para el banner-flyer */
+.banner-flyer {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: 300px; /* Altura fija para el banner */
+    position: relative; /* Posicionamiento relativo para contener absolutamente la imagen interna */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que exceda el contenedor */
+}
+
+.banner-flyer .banner-image {
+    width: 100%; /* Ajusta la imagen para que llene completamente el ancho */
+    position: absolute; /* Posiciona absolutamente la imagen dentro del contenedor */
+    top: 50%; /* Posiciona la imagen en el centro verticalmente */
+    left: 50%; /* Posiciona la imagen en el centro horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la imagen para que el centro esté exactamente en el medio del contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    min-height: 100%; /* Asegura que la altura no sea menor que la del contenedor */
+}
+
+/* Estilos para la sección de noticias */
+.news {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten según el ancho */
+    justify-content: space-around; /* Distribuye los elementos de manera uniforme */
+    padding: 20px 0; /* Espacio vertical para separar del contenido anterior/posterior */
+}
+
+.news-item {
+    flex: 1 1 200px; /* Crecen para ocupar el espacio pero no menos de 200px */
+    margin: 10px; /* Margen entre elementos */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra para dar profundidad */
+    position: relative; /* Posicionamiento relativo para el texto sobre la imagen */
+}
+
+.news-item img {
+    width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    vertical-align: bottom; /* Alinea la imagen para evitar espacio extra abajo */
+}
+
+
 
 /* Slider */
 .slider {
@@ -192,10 +262,8 @@ main {
 
 @media (max-width: 768px) {
     /* Ajustes para tabletas y dispositivos móviles más grandes */
-    nav, nav ul {
-        display: none; /* Oculta la navegación en dispositivos móviles */
-    }
-
+    /* nav, nav ul {
+        display: none; /* Oculta la navegación en dispositivos móviles */ 
     header .logo {
         left: 15%; /* Mueve el logo al 50% de la anchura del contenedor */
         transform: translateX(-50%); /* Centra el logo exactamente en el medio */
@@ -225,12 +293,36 @@ main {
         width: 100%; /* Ocupa el ancho completo */
         margin-bottom: 10px; /* Espacio entre los elementos */
     }
+    /* Mostrar el menú hamburguesa en pantallas más pequeñas */
+    .nav-checkbox {
+        display: block;
+    }
+
+    .hamburguer {
+        display: block;
+    }
+
+    .nav-checkbox:checked + .hamburguer + .mobile-nav {
+        transform: translateX(0); /* Mueve el menú a la vista cuando el checkbox está marcado */
+    }
 }
 
 @media (max-width: 480px) {
     /* Ajustes para teléfonos móviles */
     header .logo img {
         width: 80px;
+    }
+    Mostrar el menú hamburguesa en pantallas más pequeñas
+    .nav-checkbox {
+        display: block;
+    }
+
+    .hamburguer {
+        display: block;
+    }
+
+    .nav-checkbox:checked + .hamburguer + .mobile-nav {
+        transform: translateX(0); /* Mueve el menú a la vista cuando el checkbox está marcado */
     }
 }
 
@@ -350,7 +442,7 @@ button[type="submit"]:hover {
 footer {
     background: #030637;
     color: #fff;
-    padding: 20px;
+    padding: 20px;  /* Espacio alrededor del contenido */
     text-align: center;
 }
 

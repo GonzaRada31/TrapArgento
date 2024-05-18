@@ -8,11 +8,29 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <!-- Botón Login -->
     <div class="login-form">
         <a href="./pages/login.html">
             <img src="./static/login/user.png" alt="boton login">
         </a>
     </div>
+
+    <!-- Hamburguesa -->
+    <!-- <input type="checkbox" id="nav_check" class="nav-checkbox">
+    <label for="nav_check" class="hamburguer">
+        Icono del menú -->
+        <!-- <div class="menu"></div>  
+        <div class="menu"></div>
+        <div class="menu"></div>
+    </label>
+    <nav class="mobile-nav">
+        <ul>
+            <li><a href="./pages/perfiles.html">Perfiles</a></li>
+            <li><a href="./pages/multimedia.html">Multimedia</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+            <li><a href="#noticias">Noticias</a></li>
+        </ul>
+    </nav> -->
     
     <!-- Encabezado con slider de imágenes y navegación -->
     <header class="slider">
@@ -38,7 +56,7 @@
         <!-- Navegación con enlaces a secciones de la página -->
         <nav>
             <ul>
-                <li><a href="./pages/perfiles.html">Perfiles</a></li>
+                <li><a href="./pages/perfiles.html">Artistas</a></li>
                 <li><a href="./pages/multimedia.html">Multimedia</a></li>
                 <!-- <li><a href="#eventos">Eventos</a></li> -->
                 <!-- <li><a href="#noticias">Noticias</a></li> -->
@@ -98,34 +116,37 @@
         
     </header>
     <main>
-        <h1>Trap Argentino</h1>
-        <section class="content-section">
-            <div class="image-container">
-                <img src="../TrapArgento/static/gallery/artistas/Bizzarap y duki.jpg" alt="Foto 1">
-                <div class="image-info">
-                    <h3>Título Evento 1</h3>
-                    <p>Fecha del Evento</p>
-                    <p>Descripción breve del evento.</p>
-                </div>
+        <section class="banner-flyer">
+            <img src="../TrapArgento/static/portada/flyer.gif" alt="Bandera de Argentina" class="banner-image">
+            <!-- <p>Descripción breve de la Noticia 1</p> -->
+        </section>
+        <section class="news">
+            <div class="news-item">
+                <a href="https://www.youtube.com/watch?app=desktop&v=hzoSxUMaB-U" target="_blank">
+                    <img src="../TrapArgento/static/main/noticia 1.jpg" alt="Noticia 1">
+                </a>
+                <h2>"MS - Freestyle Rap"</h2>
+                <p>"MS - Freestyle Rap" nos brinda todas las noticias desde su canal de youtube...</p>
             </div>
-            <div class="image-container">
-                <img src="../TrapArgento/static/gallery/artistas/Lit Killa.jpg" alt="Foto 2">
-                <div class="image-info">
-                    <h3>Título Evento 2</h3>
-                    <p>Fecha del Evento</p>
-                    <p>Descripción breve del evento.</p>
-                </div>
+            <div class="news-item">
+                <a href="https://billboard.ar/todo-lo-que-tenes-que-saber-sobre-la-nueva-edicion-del-buenos-aires-trap/" target="_blank">
+                    <img src="../TrapArgento/static/main/noticia 2.jpg" alt="Noticia 2">
+                </a>
+                <h2>"Portal Billboard"</h2>
+                <p>billboard.ar dió a conocer algunos de los artistas que vuelven a la Argentina este año...</p>
             </div>
-            <div class="image-container">
-                <img src="/static/gallery/artistas/Paulo Londra Vivo.jpg" alt="Foto 3">
-                <div class="image-info">
-                    <h3>Título Evento 3</h3>
-                    <p>Fecha del Evento</p>
-                    <p>Descripción breve del evento.</p>
-                </div>
+            <div class="news-item">
+                <a href="https://www.infobae.com/inhouse/2024/05/03/buenos-aires-trap-llega-la-nueva-edicion-del-festival-que-consagro-a-duki-cazzu-y-bizarrap/" target="_blank">
+                    <img src="../TrapArgento/static/main/Bs As Trap.avif" alt="Noticia 3">
+                </a>
+                <h2>"Duki en Argentina"</h2>
+                <p>Celebrado por primera vez en 2019, Buenos Aires Trap logró marcar un antes y después...</p>
             </div>
+            
         </section>
     </main>
+        
+    
 
     <aside class="asideSection">
         <div class="left-section">
