@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-yf72cQ7eRPiTKLz7r33cl7U3GV8O3HhpIB4C7qtlUuZ+Xz+aiST7VWE17xwwltFj" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 <body>
@@ -33,83 +34,48 @@
         </div>
         <div class="gradient"></div>
     </section>
-
-
     <main>
-        <div class="container">
-            <div class="main-content">
-                <div class="header">
-                    <h5>Canciones Populares</h5>
-                    <a href="#" id="view-all-btn">
-                        Mostrar mas!!
-                    </a>
+        <section id="form-songs" class="container">
+            <h5>Track list</h5>
+            <form action="" method="post">
+                <div>
+                    <label for="">Titulo</label>
+                    <input type="text" name="songTitle" id="songTitle" required>
                 </div>
-                <div class="song-list">
-                    <ul>
-                        <li>
-                            <div class="flex">                    
-                                <div class="flex-1">
-                                    <p class="letra-list">
-                                        Adán y Eva
-                                    </p>
-                                    <p class="letra-list">
-                                        Álbum: "Homerun"
-                                    </p>
-                                </div>
-                                <div class="time-letra">
-                                    3:33 minutos
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="flex">                    
-                                <div class="flex-1">
-                                    <p class="letra-list">
-                                        Chica Paranormal
-                                    </p>
-                                    <p class="letra-list">
-                                        Álbum: "Homerun"
-                                    </p>
-                                </div>
-                                <div class="time-letra">
-                                    3:35 minutos
-                                </div>
-                            </div>
-                        </li>
-                        <!-- Las otras canciones van aquí -->
-                        <li>
-                            <div class="flex">                    
-                                <div class="flex-1">
-                                    <p class="letra-list">
-                                        Chica Paranormal
-                                    </p>
-                                    <p class="letra-list">
-                                        Álbum: "Homerun"
-                                    </p>
-                                </div>
-                                <div class="time-letra">
-                                    3:35 minutos
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="flex">                    
-                                <div class="flex-1">
-                                    <p class="letra-list">
-                                        Chica Paranormal
-                                    </p>
-                                    <p class="letra-list">
-                                        Álbum: "Homerun"
-                                    </p>
-                                </div>
-                                <div class="time-letra">
-                                    3:35 minutos
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                <div>
+                    <label for="">duracion</label>
+                    <input type="text" name="songDuration" id="songDuration" placeholder="Duración (ej. 3:30)" required>
                 </div>
-            </div>
+                <div>
+                    <label for="">fecha de lanzamiento</label>
+                    <input type="datetime-local" name="songDate" id="songDate" required>
+                </div>
+                <!-- <div>
+                    <input type="file" name="songFile" accept=".mp3" required>
+                </div> -->
+                <div>
+                    <input type="hidden" name="id_songs" id="id-songs">
+                </div>
+                <button class="btn-submit" type="button" id="btn-save-song">Agregar</button>
+            </form>
+        </section>
+        <div id="list" class="container">
+            
+            <table id="list-table-songs" class="table">
+                <thead>
+                    <tr>
+                        <th>Titulo</th>
+                        <th>duracion</th>
+                        <th>fecha_subida</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-table-songs">
+                    <script>
+                        // Llama a showTracks al cargar la página
+                        window.addEventListener('load', showTracks);
+                    </script>
+                </tbody>
+            </table>
             <div class="sidebar">
                 <h2>Artistas que Sigo</h2>
                 <ul id="followed-artists">
@@ -131,8 +97,6 @@
                     <p>Me gusta <span class="material-symbols-outlined" style="color: red;">favorite</span> :  <span id="meGusta-count"></span></p>
                     
                 </div>
-
-             
 
                 <form id="artist-form">
                     <label for="artist-input">Seguir Nuevo Artista:</label>
@@ -163,7 +127,8 @@
                     </div>
                 </div>
             </div>        
-        </section>     
+        </section>   
+        <script src="../js/crud.track.fetch.js"></script>
     </main>
 
     

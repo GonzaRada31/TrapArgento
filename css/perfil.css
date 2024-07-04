@@ -393,6 +393,110 @@ a:hover {
     font-weight: bold;
     color: #007bff;
 }
+/* Estilo para el formulario */
+#form-songs {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#form-songs label {
+    font-weight: bold;
+}
+
+#songTitle,
+#songDuration,
+#songDate {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#btn-save-song {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo para la tabla */
+#list-table-songs {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#list-table-songs th,
+#list-table-songs td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#list-table-songs th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Estilo para la tabla en dispositivos pequeños */
+@media (max-width: 768px) {
+    #list-table-songs {
+        display: block;
+    }
+
+    #list-table-songs thead {
+        display: none;
+    }
+
+    #list-table-songs tbody,
+    #list-table-songs tr,
+    #list-table-songs td {
+        display: block;
+        width: 100%;
+    }
+
+    #list-table-songs td {
+        border-bottom: none;
+    }
+}
+/* Estilo para los botones */
+.btn-cac {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo para el ícono dentro del botón */
+.btn-cac i {
+    margin-right: 5px;
+}
+
+/* Estilo para los botones */
+.btn-cac {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.btn-cac img {
+    height: 20px;
+    width: 20px;
+}
+
 
 /* Formulario para seguir artistas */
 #artist-form {
